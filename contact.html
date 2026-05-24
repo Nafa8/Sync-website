@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>طلب استشارة وتواصل | Sync</title>
+    
+    <!-- Material Icons & IBM Plex Arabic Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind-config.js"></script>
+    
+    <!-- Custom Style Sheet -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="text-on-surface bg-background antialiased selection:bg-secondary-container selection:text-on-secondary-container min-h-screen flex flex-col pt-20">
+
+    <!-- Global Header Placeholder -->
+    <header id="global-header"></header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full pt-12 text-right">
+        <!-- Hero Header -->
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full w-fit mb-6 mx-auto">
+                <span class="material-symbols-outlined text-sm">contact_support</span>
+                <span class="font-label-md text-label-md font-bold">تواصل معنا / Contact Us</span>
+            </div>
+            <h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-4 font-bold">اطلب استشارتك المجانية الآن</h1>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">دعنا نناقش كيف يمكن لـ سينك مزامنة عمليات مؤسستك وتأمين بنيتها التحتية.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+            <!-- Contact Details (1/3 Width on Large Screens) -->
+            <div class="flex flex-col gap-8 bg-surface-container-low p-8 rounded-3xl border border-surface-variant/50">
+                <h3 class="font-headline-md text-headline-md text-primary font-bold border-b border-outline-variant/30 pb-4">معلومات الاتصال / Details</h3>
+                
+                <div class="flex flex-col gap-6 font-body-md text-on-surface-variant">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-primary/5 text-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-primary">الموقع الجغرافي / Address</h4>
+                            <p class="text-sm">طرابلس ، ليبيا</p>
+                            <p dir="ltr" class="text-xs opacity-75">Tripoli, Libya</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-primary/5 text-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-primary">البريد الإلكتروني / Email</h4>
+                            <a href="mailto:nafaelhadi@gmail.com" class="text-sm hover:text-secondary transition-colors" dir="ltr">nafaelhadi@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 bg-primary/5 text-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined">schedule</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-primary">ساعات العمل / Hours</h4>
+                            <p class="text-sm">الأحد - الخميس (9:00 ص - 5:00 م)</p>
+                            <p dir="ltr" class="text-xs opacity-75">Sunday - Thursday: 9:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat via Whatsapp CTA -->
+                <div class="border-t border-outline-variant/30 pt-6 mt-2">
+                    <a href="https://wa.me/218900000000" target="_blank" class="w-full bg-[#25D366] text-white py-4 rounded-full font-label-md text-label-md btn-hover flex items-center justify-center gap-3">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.394 0 12.03c0 2.12.551 4.189 1.597 6.01L0 24l6.135-1.61a11.771 11.771 0 005.911 1.603h.005c6.638 0 12.034-5.395 12.034-12.03a11.75 11.75 0 00-3.417-8.467z"></path></svg>
+                        <span>تواصل عبر الواتساب / WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Consultation Form (2/3 Width on Large Screens) -->
+            <div class="lg:col-span-2 bg-surface p-8 md:p-12 rounded-3xl ambient-shadow-md border border-outline-variant/20">
+                <form class="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex flex-col gap-2">
+                        <label class="font-label-md text-primary font-bold">الاسم الكامل / Full Name <span class="text-error">*</span></label>
+                        <input class="w-full p-4 rounded-xl border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary bg-background font-body-md transition-all outline-none" placeholder="أدخل اسمك الكامل" type="text" required>
+                    </div>
+                    
+                    <div class="flex flex-col gap-2">
+                        <label class="font-label-md text-primary font-bold">اسم الشركة / Company Name</label>
+                        <input class="w-full p-4 rounded-xl border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary bg-background font-body-md transition-all outline-none" placeholder="اسم مؤسستك أو شركتك" type="text">
+                    </div>
+                    
+                    <div class="flex flex-col gap-2">
+                        <label class="font-label-md text-primary font-bold">البريد الإلكتروني للعمل / Work Email <span class="text-error">*</span></label>
+                        <input class="w-full p-4 rounded-xl border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary bg-background font-body-md transition-all outline-none" dir="ltr" placeholder="email@company.com" type="email" required>
+                    </div>
+                    
+                    <div class="flex flex-col gap-2">
+                        <label class="font-label-md text-primary font-bold">رقم الهاتف / Phone Number <span class="text-error">*</span></label>
+                        <input class="w-full p-4 rounded-xl border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary bg-background font-body-md transition-all outline-none" dir="ltr" placeholder="+218 -- --- ----" type="tel" required>
+                    </div>
+                    
+                    <div class="flex flex-col gap-2 md:col-span-2">
+                        <label class="font-label-md text-primary font-bold">الخدمة المطلوبة / Service Interest <span class="text-error">*</span></label>
+                        <select class="w-full p-4 rounded-xl border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary bg-background font-body-md transition-all outline-none appearance-none" required>
+                            <option value="">اختر الخدمة المطلوبة...</option>
+                            <option value="erpnext">تخصيص نظام ERPNext Customization</option>
+                            <option value="networks">الشبكات والأمان Networks & Security</option>
+                            <option value="alignment">تسيير ومواءمة الأعمال Business Alignment</option>
+                            <option value="other">استشارة عامة أو أخرى Other / General</option>
+                        </select>
+                    </div>
+                    
+                    <div class="flex flex-col gap-2 md:col-span-2">
+                        <label class="font-label-md text-primary font-bold">تفاصيل الطلب / Message <span class="text-error">*</span></label>
+                        <textarea class="w-full p-4 rounded-xl border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary bg-background font-body-md transition-all outline-none resize-none" placeholder="اشرح لنا طبيعة المشكلة أو ما ترغب في إنجازه..." rows="5" required></textarea>
+                    </div>
+                    
+                    <div class="md:col-span-2 mt-4">
+                        <button class="w-full bg-primary text-on-primary hover:bg-secondary hover:text-on-secondary py-4 rounded-full font-label-md text-label-md btn-hover flex items-center justify-center gap-2" type="submit">
+                            إرسال طلب الاستشارة / Send Request
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Global Footer Placeholder -->
+    <footer id="global-footer"></footer>
+
+    <!-- Global Modals Container -->
+    <div id="global-modals"></div>
+
+    <!-- Scripts -->
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

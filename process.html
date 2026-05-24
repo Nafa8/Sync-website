@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>مراحل العمل والمنهجية | Sync</title>
+    
+    <!-- Material Icons & IBM Plex Arabic Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="js/tailwind-config.js"></script>
+    
+    <!-- Custom Style Sheet -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body class="text-on-surface bg-background antialiased selection:bg-secondary-container selection:text-on-secondary-container min-h-screen flex flex-col pt-20">
+
+    <!-- Global Header Placeholder -->
+    <header id="global-header"></header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full pt-12 text-right">
+        <!-- Hero Header -->
+        <div class="text-center mb-16">
+            <div class="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full w-fit mb-6 mx-auto">
+                <span class="material-symbols-outlined text-sm">route</span>
+                <span class="font-label-md text-label-md font-bold">منهجية العمل / Our Process</span>
+            </div>
+            <h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-4 font-bold">منهجية منظمة لضمان تحولك الرقمي</h1>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">نتبع أسلوباً هندسياً دقيقاً يبدأ بفهم واقع مؤسستك وينتهي بتأمين استمرارية نموها بأمان تام وسلاسة تشغيلية.</p>
+        </div>
+
+        <!-- Vertical Process Roadmap -->
+        <div class="max-w-4xl mx-auto flex flex-col gap-12 relative before:content-[''] before:absolute before:top-8 before:bottom-8 before:right-6 md:before:right-1/2 before:w-0.5 before:bg-outline-variant/30">
+            <!-- Phase 1 -->
+            <div class="flex flex-col md:flex-row gap-8 relative items-start md:items-center">
+                <!-- Marker Dot -->
+                <div class="absolute right-3 md:right-1/2 md:translate-x-1/2 w-6 h-6 rounded-full bg-surface border-4 border-primary z-10"></div>
+                
+                <!-- Card Container 1 (Right Side on Desktop) -->
+                <div class="w-full md:w-[45%] mr-12 md:mr-0 md:ml-auto bg-surface p-8 rounded-3xl border border-outline-variant/20 ambient-shadow-sm flex flex-col gap-4">
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full font-label-sm text-label-sm font-bold">المرحلة الأولى / Phase 01</span>
+                        <span class="material-symbols-outlined text-primary text-2xl">analytics</span>
+                    </div>
+                    <h2 class="font-headline-md text-headline-md text-primary font-bold">التحليل الشامل والتقييم / Assessment</h2>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed">
+                        نبدأ بلقاءات مكثفة مع مدراء الأقسام لدراسة الدورة المستندية الحالية. يقوم خبراؤنا بفحص الشبكة الداخلية والأجهزة المتصلة وتقييم ثغرات الحماية، وتقديم تقرير متكامل يشرح الثغرات التقنية وخطة المعالجة.
+                    </p>
+                    <ul class="list-disc pr-6 text-sm text-on-surface-variant space-y-1">
+                        <li>فحص دورتك الورقية والإلكترونية وإيجاد الفجوات.</li>
+                        <li>تدقيق سلامة الشبكات الحالية وأداء المخدمات.</li>
+                        <li>إصدار خارطة طريق للتحول الرقمي والميزانية المتوقعة.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="flex flex-col md:flex-row gap-8 relative items-start md:items-center">
+                <!-- Marker Dot -->
+                <div class="absolute right-3 md:right-1/2 md:translate-x-1/2 w-6 h-6 rounded-full bg-surface border-4 border-primary z-10"></div>
+                
+                <!-- Card Container 2 (Left Side on Desktop) -->
+                <div class="w-full md:w-[45%] mr-12 md:mr-auto bg-surface p-8 rounded-3xl border border-outline-variant/20 ambient-shadow-sm flex flex-col gap-4">
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full font-label-sm text-label-sm font-bold">المرحلة الثانية / Phase 02</span>
+                        <span class="material-symbols-outlined text-primary text-2xl">settings_ethernet</span>
+                    </div>
+                    <h2 class="font-headline-md text-headline-md text-primary font-bold">التنفيذ المخصص والربط الفني / Coding & Setup</h2>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed">
+                        نقوم بإعداد خوادمك محلياً أو سحابياً وتثبيت نظام ERPNext. يبرمج مطورونا الوحدات المخصصة وحقول البيانات المطلوبة، بالتزامن مع إعداد الشبكات وجدران الحماية للربط الآمن للموظفين والفروع وتأمين قواعد البيانات.
+                    </p>
+                    <ul class="list-disc pr-6 text-sm text-on-surface-variant space-y-1">
+                        <li>تخصيص ERPNext (Frappe framework) واختبار كفاءة الأنظمة.</li>
+                        <li>تركيب وإعداد جدران الحماية Fortigate وربط الفروع بـ IPsec VPN.</li>
+                        <li>إجراء تدريب مكثف للموظفين واختبار أداء النظام النهائي.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="flex flex-col md:flex-row gap-8 relative items-start md:items-center">
+                <!-- Marker Dot -->
+                <div class="absolute right-3 md:right-1/2 md:translate-x-1/2 w-6 h-6 rounded-full bg-primary z-10 shadow-lg"></div>
+                
+                <!-- Card Container 3 (Right Side on Desktop) -->
+                <div class="w-full md:w-[45%] mr-12 md:mr-0 md:ml-auto bg-primary text-on-primary p-8 rounded-3xl ambient-shadow-md flex flex-col gap-4">
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 bg-on-primary/10 text-on-primary rounded-full font-label-sm text-label-sm font-bold">المرحلة الثالثة / Phase 03</span>
+                        <span class="material-symbols-outlined text-on-primary text-2xl">support_agent</span>
+                    </div>
+                    <h2 class="font-headline-md text-headline-md text-on-primary font-bold">الدعم الفني المستدام / Continuous Care</h2>
+                    <p class="font-body-md opacity-90 leading-relaxed">
+                        التحول الرقمي هو شراكة دائمة. نوفر دعماً فنياً لحل أي مشاكل تشغيلية، ومراقبة دورية لسلامة الشبكات وجدران الحماية، مع أخذ نسخ احتياطية مؤتمتة من قواعد البيانات لضمان عدم ضياع أي ملف أو فاتورة.
+                    </p>
+                    <ul class="list-disc pr-6 text-sm opacity-80 space-y-1">
+                        <li>اتفاقيات مستوى الخدمة (SLA) للاستجابة السريعة للمشاكل الطارئة.</li>
+                        <li>إجراء مراجعات دورية وتحديث برامج الحماية لمواجهة التهديدات.</li>
+                        <li>تقديم ترقيات وميزات إضافية مع نمو أعمالك وموظفيك.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Consultation Banner -->
+        <div class="w-full bg-secondary text-on-secondary rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between ambient-shadow-sm mt-16">
+            <div class="max-w-xl">
+                <h3 class="font-headline-md text-headline-md mb-2 font-bold">لنفهم واقعك ونبدأ المرحلة الأولى اليوم</h3>
+                <p class="font-body-md text-body-md text-secondary-fixed-dim">احجز جلسة استشارية أولى لمراجعة آليات عمل شركتك مع استشاريينا.</p>
+            </div>
+            <a href="contact.html" class="mt-6 md:mt-0 bg-on-secondary text-secondary hover:bg-surface hover:text-primary px-8 py-4 rounded-full font-label-md text-label-md btn-hover whitespace-nowrap">
+                ابدأ التحليل والتقييم / Start Audit
+            </a>
+        </div>
+    </main>
+
+    <!-- Global Footer Placeholder -->
+    <footer id="global-footer"></footer>
+
+    <!-- Global Modals Container -->
+    <div id="global-modals"></div>
+
+    <!-- Scripts -->
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
