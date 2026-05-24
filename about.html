@@ -3,7 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>عن الشركة | Sync</title>
+    
+    <!-- Sync/About Title -->
+    <title>Sync/About</title>
+    
+    <!-- Website Favicon inside Browser Tab -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- Startup Language Script (Executes immediately to avoid flash of unstyled direction) -->
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem('sync-lang') || 'ar';
+            document.documentElement.lang = savedLang;
+            document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
+        })();
+    </script>
     
     <!-- Material Icons & IBM Plex Arabic Font -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
@@ -32,16 +46,22 @@
             <div class="z-10 relative max-w-3xl">
                 <div class="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full w-fit mb-6">
                     <span class="material-symbols-outlined text-sm">corporate_fare</span>
-                    <span class="font-label-md text-label-md font-bold">تعرف علينا / About Us</span>
+                    <span class="font-label-md text-label-md font-bold">
+                        <span class="lang-ar">تعرف علينا</span>
+                        <span class="lang-en">About Us</span>
+                    </span>
                 </div>
                 <h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-6 leading-tight">
-                    من نحن؟ قصة التزامن والأمان الرقمي.
+                    <span class="lang-ar">من نحن؟ قصة التزامن والأمان الرقمي.</span>
+                    <span class="lang-en">Who We Are: The Story of Sync and Security.</span>
                 </h1>
                 <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-6">
-                    سينك (Sync) هي شركة تقنية متخصصة تأسست لتلبي متطلبات التحول الرقمي المتسارع. نحن لا نقدم حلولاً برمجية جاهزة، بل نعمل كشريك استراتيجي وثيق يدرس تفاصيل عملك ويصمم لها بيئة رقمية متكاملة تضمن ترابط العمليات وحصانتها الأمنية.
+                    <span class="lang-ar">سينك (Sync) هي شركة تقنية متخصصة تأسست لتلبي متطلبات التحول الرقمي المتسارع. نحن لا نقدم حلولاً برمجية جاهزة، بل نعمل كشريك استراتيجي وثيق يدرس تفاصيل عملك ويصمم لها بيئة رقمية متكاملة تضمن ترابط العمليات وحصانتها الأمنية.</span>
+                    <span class="lang-en">Sync is a specialized tech firm established to address the rapid demands of digital transformation. We do not sell off-the-shelf software; instead, we act as a close strategic partner auditing your business dynamics and designing custom environments.</span>
                 </p>
                 <p class="font-body-md text-body-md text-on-surface-variant opacity-85 leading-relaxed">
-                    نحن نؤمن بأن الأداء المؤسسي لا يرتفع إلا بانسجام البرمجيات مع آليات العمل الحقيقية واستقرار البنية الشبكية. لهذا نجمع بين خبرات تخصيص الأنظمة، هندسة الشبكات، واستشارات مواءمة الأعمال.
+                    <span class="lang-ar">نحن نؤمن بأن الأداء المؤسسي لا يرتفع إلا بانسجام البرمجيات مع آليات العمل الحقيقية واستقرار البنية الشبكية. لهذا نجمع بين خبرات تخصيص الأنظمة، هندسة الشبكات، واستشارات مواءمة الأعمال.</span>
+                    <span class="lang-en">We believe that enterprise performance peaks only when workflows integrate with digital systems on stable, protected networks. This is why we combine custom ERP development, network engineering, and business alignment consulting.</span>
                 </p>
             </div>
         </div>
@@ -53,9 +73,13 @@
                 <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center">
                     <span class="material-symbols-outlined text-2xl">visibility</span>
                 </div>
-                <h2 class="font-headline-md text-headline-md text-primary font-bold">رؤيتنا / Our Vision</h2>
+                <h2 class="font-headline-md text-headline-md text-primary font-bold">
+                    <span class="lang-ar">رؤيتنا</span>
+                    <span class="lang-en">Our Vision</span>
+                </h2>
                 <p class="font-body-md text-on-surface-variant leading-relaxed">
-                    أن نكون الشريك التقني الموثوق والريادي في منطقة الشرق الأوسط وشمال أفريقيا، لتمكين المؤسسات الكبيرة والمتوسطة من العمل بمرونة وأمان رقمي مطلق.
+                    <span class="lang-ar">أن نكون الشريك التقني الموثوق والريادي في منطقة الشرق الأوسط وشمال أفريقيا، لتمكين المؤسسات الكبيرة والمتوسطة من العمل بمرونة وأمان رقمي مطلق.</span>
+                    <span class="lang-en">To be the leading trusted tech partner in the MENA region, empowering medium and large enterprises with operational flexibility and absolute digital safety.</span>
                 </p>
             </div>
             
@@ -64,9 +88,13 @@
                 <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center">
                     <span class="material-symbols-outlined text-2xl">rocket_launch</span>
                 </div>
-                <h2 class="font-headline-md text-headline-md text-primary font-bold">رسالتنا / Our Mission</h2>
+                <h2 class="font-headline-md text-headline-md text-primary font-bold">
+                    <span class="lang-ar">رسالتنا</span>
+                    <span class="lang-en">Our Mission</span>
+                </h2>
                 <p class="font-body-md text-on-surface-variant leading-relaxed">
-                    تبسيط التعقيد التقني وتوفير حلول متناسقة تدمج الأنظمة الإدارية الذكية (ERP) مع الشبكات المؤمنة، لمساعدة الشركات على اتخاذ قرارات دقيقة وتحقيق نمو مستدام.
+                    <span class="lang-ar">تبسيط التعقيد التقني وتوفير حلول متناسقة تدمج الأنظمة الإدارية الذكية (ERP) مع الشبكات المؤمنة، لمساعدة الشركات على اتخاذ قرارات دقيقة وتحقيق نمو مستدام.</span>
+                    <span class="lang-en">To simplify technical complexity and supply coherent integrations that combine smart ERP solutions with protected networks, guiding businesses to make data-driven decisions.</span>
                 </p>
             </div>
 
@@ -75,42 +103,61 @@
                 <div class="w-12 h-12 bg-secondary/10 text-secondary rounded-2xl flex items-center justify-center">
                     <span class="material-symbols-outlined text-2xl">handshake</span>
                 </div>
-                <h2 class="font-headline-md text-headline-md text-primary font-bold">قيمنا / Our Values</h2>
+                <h2 class="font-headline-md text-headline-md text-primary font-bold">
+                    <span class="lang-ar">قيمنا</span>
+                    <span class="lang-en">Our Values</span>
+                </h2>
                 <p class="font-body-md text-on-surface-variant leading-relaxed">
-                    نلتزم بالشفافية الكاملة، والاتقان الهندسي المتفوق، والتطوير المستمر الذي يضمن وضع مصالح شركائنا وأمن بياناتهم في قمة أولوياتنا.
+                    <span class="lang-ar">نلتزم بالشفافية الكاملة، والاتقان الهندسي المتفوق، والتطوير المستمر الذي يضمن وضع مصالح شركائنا وأمن بياناتهم في قمة أولوياتنا.</span>
+                    <span class="lang-en">We commit to complete transparency, engineering excellence, and continuous development, always prioritizing our partners' interests and data security.</span>
                 </p>
             </div>
         </div>
 
         <!-- Detailed Corporate Strengths Section -->
         <div class="bg-surface-container-low rounded-3xl p-8 md:p-12 border border-surface-variant relative overflow-hidden mb-12">
-            <h2 class="font-headline-lg text-headline-lg text-primary mb-8 font-bold">لماذا شريكك الاستراتيجي هو "سينك"؟</h2>
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-8 font-bold">
+                <span class="lang-ar">لماذا شريكك الاستراتيجي هو "سينك"؟</span>
+                <span class="lang-en">Why Is Sync Your Strategic Partner?</span>
+            </h2>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div class="flex flex-col gap-6">
                     <div class="flex gap-4">
                         <div class="flex-shrink-0 w-10 h-10 bg-primary text-on-primary rounded-xl flex items-center justify-center font-bold">1</div>
                         <div>
-                            <h3 class="font-headline-md text-headline-md text-primary mb-2 font-semibold">تكامل هندسي وخبرة شاملة</h3>
+                            <h3 class="font-headline-md text-headline-md text-primary mb-2 font-semibold">
+                                <span class="lang-ar">تكامل هندسي وخبرة شاملة</span>
+                                <span class="lang-en">Comprehensive Engineering Expertise</span>
+                            </h3>
                             <p class="font-body-md text-on-surface-variant leading-relaxed">
-                                لا نعمل في جزر منعزلة؛ مهندسونا يملكون خلفيات قوية في البرمجة وتخطيط موارد المؤسسات وإدارة البنى التحتية الأمنية، مما يمنحنا رؤية شاملة للمشاكل وحلولاً أكثر ذكاءً.
+                                <span class="lang-ar">لا نعمل في جزر منعزلة؛ مهندسونا يملكون خلفيات قوية في البرمجة وتخطيط موارد المؤسسات وإدارة البنى التحتية الأمنية، مما يمنحنا رؤية شاملة للمشاكل وحلولاً أكثر ذكاءً.</span>
+                                <span class="lang-en">We don't work in isolation. Our team holds strong backgrounds in custom programming, ERP resources, and security infrastructures, giving us a holistic view of problems.</span>
                             </p>
                         </div>
                     </div>
                     <div class="flex gap-4">
                         <div class="flex-shrink-0 w-10 h-10 bg-primary text-on-primary rounded-xl flex items-center justify-center font-bold">2</div>
                         <div>
-                            <h3 class="font-headline-md text-headline-md text-primary mb-2 font-semibold">حلول مخصصة، لا قوالب جامدة</h3>
+                            <h3 class="font-headline-md text-headline-md text-primary mb-2 font-semibold">
+                                <span class="lang-ar">حلول مخصصة، لا قوالب جامدة</span>
+                                <span class="lang-en">Tailored Solutions, No Rigid Templates</span>
+                            </h3>
                             <p class="font-body-md text-on-surface-variant leading-relaxed">
-                                نحن ندرس دورتك المستندية، وسلوك الموظفين، ومتطلبات الأمان الخاصة بقطاعك بدقة، لنبني نظاماً يتوافق معك تماماً ولا يجبرك على تغيير طريقة نجاحك المفضلة.
+                                <span class="lang-ar">نحن ندرس دورتك المستندية، وسلوك الموظفين، ومتطلبات الأمان الخاصة بقطاعك بدقة، لنبني نظاماً يتوافق معك تماماً ولا يجبرك على تغيير طريقة نجاحك المفضلة.</span>
+                                <span class="lang-en">We analyze your administrative cycles, staff patterns, and industry-specific security guidelines to engineer systems matching your business instead of forcing you to adapt.</span>
                             </p>
                         </div>
                     </div>
                     <div class="flex gap-4">
                         <div class="flex-shrink-0 w-10 h-10 bg-primary text-on-primary rounded-xl flex items-center justify-center font-bold">3</div>
                         <div>
-                            <h3 class="font-headline-md text-headline-md text-primary mb-2 font-semibold">شراكة ممتدة ودعم مستدام</h3>
+                            <h3 class="font-headline-md text-headline-md text-primary mb-2 font-semibold">
+                                <span class="lang-ar">شراكة ممتدة ودعم مستدام</span>
+                                <span class="lang-en">Long-term Partnership & Support</span>
+                            </h3>
                             <p class="font-body-md text-on-surface-variant leading-relaxed">
-                                نعتبر نجاحك هو نجاحنا. لا تنتهي علاقتنا بك بمجرد إطلاق النظام أو إعداد الشبكة، بل نستمر في تقديم الدعم والمراقبة للتكيف مع نمو أعمالك ومواجهة التحديات المستقبلية.
+                                <span class="lang-ar">نعتبر نجاحك هو نجاحنا. لا تنتهي علاقتنا بك بمجرد إطلاق النظام أو إعداد الشبكة، بل نستمر في تقديم الدعم والمراقبة للتكيف مع نمو أعمالك ومواجهة التحديات المستقبلية.</span>
+                                <span class="lang-en">Your success is ours. Our relation doesn't stop at deployment. We deliver ongoing helpdesk support and active network monitoring to align with your expansion and future goals.</span>
                             </p>
                         </div>
                     </div>
@@ -124,11 +171,18 @@
         <!-- Consultation Banner -->
         <div class="w-full bg-secondary text-on-secondary rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between ambient-shadow-sm">
             <div class="max-w-xl">
-                <h3 class="font-headline-md text-headline-md mb-2 font-bold">تعرف على ما يمكننا تحقيقه معًا</h3>
-                <p class="font-body-md text-body-md text-secondary-fixed-dim">تواصل مع أحد مستشارينا لبدء استشارتك المجانية ومناقشة تفاصيل مشروعك.</p>
+                <h3 class="font-headline-md text-headline-md mb-2 font-bold">
+                    <span class="lang-ar">تعرف على ما يمكننا تحقيقه معًا</span>
+                    <span class="lang-en">Discover What We Can Achieve Together</span>
+                </h3>
+                <p class="font-body-md text-body-md text-secondary-fixed-dim">
+                    <span class="lang-ar">تواصل مع أحد مستشارينا لبدء استشارتك المجانية ومناقشة تفاصيل مشروعك.</span>
+                    <span class="lang-en">Talk to one of our consultants to claim your free session and review your needs.</span>
+                </p>
             </div>
             <a href="contact.html" class="mt-6 md:mt-0 bg-on-secondary text-secondary hover:bg-surface hover:text-primary px-8 py-4 rounded-full font-label-md text-label-md btn-hover whitespace-nowrap">
-                اطلب استشارة الآن / Ask for Consultation
+                <span class="lang-ar">اطلب استشارة الآن</span>
+                <span class="lang-en">Ask for Consultation</span>
             </a>
         </div>
     </main>

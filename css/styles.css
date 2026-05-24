@@ -48,3 +48,13 @@ dialog::backdrop {
 ::-webkit-scrollbar-thumb:hover {
     background: #78767b;
 }
+
+/* Language Toggle Visibility Rules */
+html[lang="ar"] .lang-en {
+    display: none !important;
+}
+
+html[lang="en"] .lang-ar {
+    display: none !important;
+}
+

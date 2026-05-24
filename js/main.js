@@ -1,6 +1,22 @@
 // Global Interactivity and Animations
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. In-Website Message Modal Helper Function
+    // 1. Language Toggle & Placeholder Translation Helper
+    const updatePlaceholders = () => {
+        const isEn = document.documentElement.lang === 'en';
+        document.querySelectorAll('[data-placeholder-ar]').forEach(input => {
+            const arVal = input.getAttribute('data-placeholder-ar');
+            const enVal = input.getAttribute('data-placeholder-en');
+            input.placeholder = isEn ? enVal : arVal;
+        });
+    };
+
+    // Initialize placeholders
+    updatePlaceholders();
+
+    // Listen for language change event to update placeholders dynamically
+    window.addEventListener('sync-lang-changed', updatePlaceholders);
+
+    // 2. In-Website Message Modal Helper Function
     window.showInWebsiteMessage = (title, text, type = 'success') => {
         const modal = document.getElementById('inwebsite-message-modal');
         const titleEl = document.getElementById('msg-modal-title');
@@ -10,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (modal && titleEl && textEl && iconEl && iconContainer) {
             titleEl.textContent = title;
-            // Support newline to HTML break replacement
             textEl.innerHTML = text.replace(/\n/g, '<br>');
             
             if (type === 'error') {
@@ -23,12 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
             
             modal.showModal();
         } else {
-            // Fallback to alert if modal structure is missing
             alert(`${title}\n\n${text}`);
         }
     };
 
-    // 2. Smooth scroll for anchor links pointing to sections
+    // 3. Smooth scroll for anchor links pointing to sections
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -36,7 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.getElementById(targetId);
             
             if (targetElement) {
-                // Smooth scroll to the target section
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
@@ -45,23 +58,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Handle consultation form validation and submission feedback
+    // 4. Handle consultation form validation and submission feedback
     const contactForm = document.querySelector('form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            // Gather input fields
-            const fullName = contactForm.querySelector('input[placeholder="أدخل اسمك الكامل"]')?.value.trim();
-            const email = contactForm.querySelector('input[type="email"]')?.value.trim();
-            const phone = contactForm.querySelector('input[type="tel"]')?.value.trim();
-            const service = contactForm.querySelector('select')?.value;
-            const message = contactForm.querySelector('textarea')?.value.trim();
+            const isAr = document.documentElement.lang === 'ar';
+            
+            // Gather input fields using unique IDs
+            const fullName = document.getElementById('form-fullname')?.value.trim();
+            const email = document.getElementById('form-email')?.value.trim();
+            const phone = document.getElementById('form-phone')?.value.trim();
+            const service = document.getElementById('form-service')?.value;
+            const message = document.getElementById('form-message')?.value.trim();
 
             if (!fullName || !email || !phone || !service || !message) {
                 showInWebsiteMessage(
-                    'تنبيه / Warning', 
-                    'الرجاء ملء جميع الحقول المطلوبة المميزة بعلامة (*).\n\nPlease fill in all required fields marked with (*).', 
+                    isAr ? 'تنبيه' : 'Warning', 
+                    isAr ? 'الرجاء ملء جميع الحقول المطلوبة المميزة بعلامة (*).' : 'Please fill in all required fields marked with (*).', 
                     'error'
                 );
                 return;
@@ -72,16 +87,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalBtnContent = submitBtn.innerHTML;
             
             submitBtn.disabled = true;
-            submitBtn.innerHTML = `
-                <span>جاري إرسال الطلب... / Sending...</span>
+            submitBtn.innerHTML = isAr ? `
+                <span>جاري إرسال الطلب...</span>
+                <span class="material-symbols-outlined animate-spin text-sm">sync</span>
+            ` : `
+                <span>Sending...</span>
                 <span class="material-symbols-outlined animate-spin text-sm">sync</span>
             `;
 
             setTimeout(() => {
-                // Open custom in-website message modal
                 showInWebsiteMessage(
-                    'تم الإرسال بنجاح / Sent Successfully',
-                    'شكرًا لتواصلك معنا! تم إرسال طلب الاستشارة الخاص بك بنجاح، وسيتصل بك أحد خبرائنا قريبًا.\n\nThank you for reaching out! Your consultation request has been successfully sent. One of our experts will contact you shortly.',
+                    isAr ? 'تم الإرسال بنجاح' : 'Sent Successfully',
+                    isAr ? 'شكرًا لتواصلك معنا! تم إرسال طلب الاستشارة الخاص بك بنجاح، وسيتصل بك أحد خبرائنا قريبًا.' : 'Thank you for reaching out! Your consultation request has been successfully sent. One of our experts will contact you shortly.',
                     'success'
                 );
                 
@@ -92,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. Scroll Reveal Interactions
+    // 5. Scroll Reveal Interactions
     const revealOnScroll = () => {
         const reveals = document.querySelectorAll('.group, .bg-surface, .p-8');
         const windowHeight = window.innerHeight;

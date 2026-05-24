@@ -3,7 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>مراحل العمل والمنهجية | Sync</title>
+    
+    <!-- Sync/Process Title -->
+    <title>Sync/Process</title>
+    
+    <!-- Website Favicon inside Browser Tab -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- Startup Language Script (Executes immediately to avoid flash of unstyled direction) -->
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem('sync-lang') || 'ar';
+            document.documentElement.lang = savedLang;
+            document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
+        })();
+    </script>
     
     <!-- Material Icons & IBM Plex Arabic Font -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
@@ -27,10 +41,19 @@
         <div class="text-center mb-16">
             <div class="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full w-fit mb-6 mx-auto">
                 <span class="material-symbols-outlined text-sm">route</span>
-                <span class="font-label-md text-label-md font-bold">منهجية العمل / Our Process</span>
+                <span class="font-label-md text-label-md font-bold">
+                    <span class="lang-ar">منهجية العمل</span>
+                    <span class="lang-en">Our Process</span>
+                </span>
             </div>
-            <h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-4 font-bold">منهجية منظمة لضمان تحولك الرقمي</h1>
-            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">نتبع أسلوباً هندسياً دقيقاً يبدأ بفهم واقع مؤسستك وينتهي بتأمين استمرارية نموها بأمان تام وسلاسة تشغيلية.</p>
+            <h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-4 font-bold">
+                <span class="lang-ar">منهجية منظمة لضمان تحولك الرقمي</span>
+                <span class="lang-en">Structured Methodology For Digital Integration</span>
+            </h1>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                <span class="lang-ar">نتبع أسلوباً هندسياً دقيقاً يبدأ بفهم واقع مؤسستك وينتهي بتأمين استمرارية نموها بأمان تام وسلاسة تشغيلية.</span>
+                <span class="lang-en">We follow a precise engineering roadmap that begins by auditing your enterprise reality and finishes by securing its growth.</span>
+            </p>
         </div>
 
         <!-- Vertical Process Roadmap -->
@@ -43,17 +66,33 @@
                 <!-- Card Container 1 (Right Side on Desktop) -->
                 <div class="w-full md:w-[45%] mr-12 md:mr-0 md:ml-auto bg-surface p-8 rounded-3xl border border-outline-variant/20 ambient-shadow-sm flex flex-col gap-4">
                     <div class="flex items-center justify-between">
-                        <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full font-label-sm text-label-sm font-bold">المرحلة الأولى / Phase 01</span>
+                        <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full font-label-sm text-label-sm font-bold">
+                            <span class="lang-ar">المرحلة الأولى</span>
+                            <span class="lang-en">Phase 01</span>
+                        </span>
                         <span class="material-symbols-outlined text-primary text-2xl">analytics</span>
                     </div>
-                    <h2 class="font-headline-md text-headline-md text-primary font-bold">التحليل الشامل والتقييم / Assessment</h2>
+                    <h2 class="font-headline-md text-headline-md text-primary font-bold">
+                        <span class="lang-ar">التحليل الشامل والتقييم</span>
+                        <span class="lang-en">Assessment & Auditing</span>
+                    </h2>
                     <p class="font-body-md text-on-surface-variant leading-relaxed">
-                        نبدأ بلقاءات مكثفة مع مدراء الأقسام لدراسة الدورة المستندية الحالية. يقوم خبراؤنا بفحص الشبكة الداخلية والأجهزة المتصلة وتقييم ثغرات الحماية، وتقديم تقرير متكامل يشرح الثغرات التقنية وخطة المعالجة.
+                        <span class="lang-ar">نبدأ بلقاءات مكثفة مع مدراء الأقسام لدراسة الدورة المستندية الحالية. يقوم خبراؤنا بفحص الشبكة الداخلية والأجهزة المتصلة وتقييم ثغرات الحماية، وتقديم تقرير متكامل يشرح الثغرات التقنية وخطة المعالجة.</span>
+                        <span class="lang-en">We schedule workshops with stakeholders to study current administrative cycles. Our engineers inspect local networks, connections and database structures, delivering a roadmap.</span>
                     </p>
                     <ul class="list-disc pr-6 text-sm text-on-surface-variant space-y-1">
-                        <li>فحص دورتك الورقية والإلكترونية وإيجاد الفجوات.</li>
-                        <li>تدقيق سلامة الشبكات الحالية وأداء المخدمات.</li>
-                        <li>إصدار خارطة طريق للتحول الرقمي والميزانية المتوقعة.</li>
+                        <li>
+                            <span class="lang-ar">فحص دورتك الورقية والإلكترونية وإيجاد الفجوات.</span>
+                            <span class="lang-en">Auditing paper/digital cycles and mapping workflow gaps.</span>
+                        </li>
+                        <li>
+                            <span class="lang-ar">تدقيق سلامة الشبكات الحالية وأداء المخدمات.</span>
+                            <span class="lang-en">Inspecting current routers configuration and servers load.</span>
+                        </li>
+                        <li>
+                            <span class="lang-ar">إصدار خارطة طريق للتحول الرقمي والميزانية المتوقعة.</span>
+                            <span class="lang-en">Issuing your customized integration roadmap and budget estimates.</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -66,17 +105,33 @@
                 <!-- Card Container 2 (Left Side on Desktop) -->
                 <div class="w-full md:w-[45%] mr-12 md:mr-auto bg-surface p-8 rounded-3xl border border-outline-variant/20 ambient-shadow-sm flex flex-col gap-4">
                     <div class="flex items-center justify-between">
-                        <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full font-label-sm text-label-sm font-bold">المرحلة الثانية / Phase 02</span>
+                        <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full font-label-sm text-label-sm font-bold">
+                            <span class="lang-ar">المرحلة الثانية</span>
+                            <span class="lang-en">Phase 02</span>
+                        </span>
                         <span class="material-symbols-outlined text-primary text-2xl">settings_ethernet</span>
                     </div>
-                    <h2 class="font-headline-md text-headline-md text-primary font-bold">التنفيذ المخصص والربط الفني / Coding & Setup</h2>
+                    <h2 class="font-headline-md text-headline-md text-primary font-bold">
+                        <span class="lang-ar">التنفيذ المخصص والربط الفني</span>
+                        <span class="lang-en">Custom Setup & Coding</span>
+                    </h2>
                     <p class="font-body-md text-on-surface-variant leading-relaxed">
-                        نقوم بإعداد خوادمك محلياً أو سحابياً وتثبيت نظام ERPNext. يبرمج مطورونا الوحدات المخصصة وحقول البيانات المطلوبة، بالتزامن مع إعداد الشبكات وجدران الحماية للربط الآمن للموظفين والفروع وتأمين قواعد البيانات.
+                        <span class="lang-ar">نقوم بإعداد خوادمك محلياً أو سحابياً وتثبيت نظام ERPNext. يبرمج مطورونا الوحدات المخصصة وحقول البيانات المطلوبة، بالتزامن مع إعداد الشبكات وجدران الحماية للربط الآمن للموظفين والفروع وتأمين قواعد البيانات.</span>
+                        <span class="lang-en">We configure your virtual machines or cloud servers to deploy ERPNext. Our developers customize forms and business logic, while implementing firewalls to secure database connections.</span>
                     </p>
                     <ul class="list-disc pr-6 text-sm text-on-surface-variant space-y-1">
-                        <li>تخصيص ERPNext (Frappe framework) واختبار كفاءة الأنظمة.</li>
-                        <li>تركيب وإعداد جدران الحماية Fortigate وربط الفروع بـ IPsec VPN.</li>
-                        <li>إجراء تدريب مكثف للموظفين واختبار أداء النظام النهائي.</li>
+                        <li>
+                            <span class="lang-ar">تخصيص ERPNext (Frappe framework) واختبار كفاءة الأنظمة.</span>
+                            <span class="lang-en">Customizing ERPNext modules and verifying script performance.</span>
+                        </li>
+                        <li>
+                            <span class="lang-ar">تركيب وإعداد جدران الحماية Fortigate وربط الفروع بـ IPsec VPN.</span>
+                            <span class="lang-en">Installing firewall rules and creating remote SSL/IPsec VPN access keys.</span>
+                        </li>
+                        <li>
+                            <span class="lang-ar">إجراء تدريب مكثف للموظفين واختبار أداء النظام النهائي.</span>
+                            <span class="lang-en">Conducting admin training sessions and loading initial database tables.</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -89,17 +144,33 @@
                 <!-- Card Container 3 (Right Side on Desktop) -->
                 <div class="w-full md:w-[45%] mr-12 md:mr-0 md:ml-auto bg-primary text-on-primary p-8 rounded-3xl ambient-shadow-md flex flex-col gap-4">
                     <div class="flex items-center justify-between">
-                        <span class="px-3 py-1 bg-on-primary/10 text-on-primary rounded-full font-label-sm text-label-sm font-bold">المرحلة الثالثة / Phase 03</span>
+                        <span class="px-3 py-1 bg-on-primary/10 text-on-primary rounded-full font-label-sm text-label-sm font-bold">
+                            <span class="lang-ar">المرحلة الثالثة</span>
+                            <span class="lang-en">Phase 03</span>
+                        </span>
                         <span class="material-symbols-outlined text-on-primary text-2xl">support_agent</span>
                     </div>
-                    <h2 class="font-headline-md text-headline-md text-on-primary font-bold">الدعم الفني المستدام / Continuous Care</h2>
+                    <h2 class="font-headline-md text-headline-md text-on-primary font-bold">
+                        <span class="lang-ar">الدعم الفني المستدام</span>
+                        <span class="lang-en">Continuous Care & SLA</span>
+                    </h2>
                     <p class="font-body-md opacity-90 leading-relaxed">
-                        التحول الرقمي هو شراكة دائمة. نوفر دعماً فنياً لحل أي مشاكل تشغيلية، ومراقبة دورية لسلامة الشبكات وجدران الحماية، مع أخذ نسخ احتياطية مؤتمتة من قواعد البيانات لضمان عدم ضياع أي ملف أو فاتورة.
+                        <span class="lang-ar">التحول الرقمي هو شراكة دائمة. نوفر دعماً فنياً لحل أي مشاكل تشغيلية، ومراقبة دورية لسلامة الشبكات وجدران الحماية، مع أخذ نسخ احتياطية مؤتمتة من قواعد البيانات لضمان عدم ضياع أي ملف أو فاتورة.</span>
+                        <span class="lang-en">Digital transformation is a continuous alliance. We guarantee technical support, run periodic network stability checks, keep firewall firmware patched, and automate backups to secure files.</span>
                     </p>
                     <ul class="list-disc pr-6 text-sm opacity-80 space-y-1">
-                        <li>اتفاقيات مستوى الخدمة (SLA) للاستجابة السريعة للمشاكل الطارئة.</li>
-                        <li>إجراء مراجعات دورية وتحديث برامج الحماية لمواجهة التهديدات.</li>
-                        <li>تقديم ترقيات وميزات إضافية مع نمو أعمالك وموظفيك.</li>
+                        <li>
+                            <span class="lang-ar">اتفاقيات مستوى الخدمة (SLA) للاستجابة السريعة للمشاكل الطارئة.</span>
+                            <span class="lang-en">Service Level Agreements (SLAs) for prompt incident responses.</span>
+                        </li>
+                        <li>
+                            <span class="lang-ar">إجراء مراجعات دورية وتحديث برامج الحماية لمواجهة التهديدات.</span>
+                            <span class="lang-en">Performing periodic firewall configurations updates.</span>
+                        </li>
+                        <li>
+                            <span class="lang-ar">تقديم ترقيات وميزات إضافية مع نمو أعمالك وموظفيك.</span>
+                            <span class="lang-en">Provisioning upgrades and extra modules as your enterprise expands.</span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -108,11 +179,18 @@
         <!-- Consultation Banner -->
         <div class="w-full bg-secondary text-on-secondary rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between ambient-shadow-sm mt-16">
             <div class="max-w-xl">
-                <h3 class="font-headline-md text-headline-md mb-2 font-bold">لنفهم واقعك ونبدأ المرحلة الأولى اليوم</h3>
-                <p class="font-body-md text-body-md text-secondary-fixed-dim">احجز جلسة استشارية أولى لمراجعة آليات عمل شركتك مع استشاريينا.</p>
+                <h3 class="font-headline-md text-headline-md mb-2 font-bold">
+                    <span class="lang-ar">لنفهم واقعك ونبدأ المرحلة الأولى اليوم</span>
+                    <span class="lang-en">Let's Audit Your Workflows Today</span>
+                </h3>
+                <p class="font-body-md text-body-md text-secondary-fixed-dim">
+                    <span class="lang-ar">احجز جلسة استشارية أولى لمراجعة آليات عمل شركتك مع استشاريينا.</span>
+                    <span class="lang-en">Book your initial session with our consultants to evaluate your digital requirements.</span>
+                </p>
             </div>
             <a href="contact.html" class="mt-6 md:mt-0 bg-on-secondary text-secondary hover:bg-surface hover:text-primary px-8 py-4 rounded-full font-label-md text-label-md btn-hover whitespace-nowrap">
-                ابدأ التحليل والتقييم / Start Audit
+                <span class="lang-ar">ابدأ التحليل والتقييم</span>
+                <span class="lang-en">Start Audit</span>
             </a>
         </div>
     </main>

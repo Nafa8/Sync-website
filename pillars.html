@@ -3,7 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>الركائز الاستراتيجية | Sync</title>
+    
+    <!-- Sync/Pillars Title -->
+    <title>Sync/Pillars</title>
+    
+    <!-- Website Favicon inside Browser Tab -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- Startup Language Script (Executes immediately to avoid flash of unstyled direction) -->
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem('sync-lang') || 'ar';
+            document.documentElement.lang = savedLang;
+            document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
+        })();
+    </script>
     
     <!-- Material Icons & IBM Plex Arabic Font -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
@@ -27,10 +41,19 @@
         <div class="text-center mb-16">
             <div class="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full w-fit mb-6 mx-auto">
                 <span class="material-symbols-outlined text-sm">filter_hdr</span>
-                <span class="font-label-md text-label-md font-bold">الركائز الأساسية / Our Pillars</span>
+                <span class="font-label-md text-label-md font-bold">
+                    <span class="lang-ar">الركائز الأساسية</span>
+                    <span class="lang-en">Our Pillars</span>
+                </span>
             </div>
-            <h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-4 font-bold">الركائز الاستراتيجية التي نرتكز عليها</h1>
-            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">تعتمد سينك في بناء علاقاتها وتصميم منظوماتها على أربعة ركائز متكاملة تضمن نجاح شريكنا التجاري واستقرار عملياته.</p>
+            <h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-4 font-bold">
+                <span class="lang-ar">الركائز الاستراتيجية التي نرتكز عليها</span>
+                <span class="lang-en">Strategic Pillars of Our Operations</span>
+            </h1>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                <span class="lang-ar">تعتمد سينك في بناء علاقاتها وتصميم منظوماتها على أربعة ركائز متكاملة تضمن نجاح شريكنا التجاري واستقرار عملياته.</span>
+                <span class="lang-en">Sync anchors its engineering processes and partner relationships on four core pillars that secure business performance.</span>
+            </p>
         </div>
 
         <!-- Pillars Grid Layout -->
@@ -46,9 +69,13 @@
                     <span class="font-headline-xl text-5xl opacity-10 text-primary font-bold">01</span>
                 </div>
                 <div class="z-10">
-                    <h2 class="font-headline-md text-headline-md text-primary font-bold mb-3">التكامل والترابط / Integration</h2>
+                    <h2 class="font-headline-md text-headline-md text-primary font-bold mb-3">
+                        <span class="lang-ar">التكامل والترابط / Integration</span>
+                        <span class="lang-en">Cohesion & Integration</span>
+                    </h2>
                     <p class="font-body-md text-on-surface-variant leading-relaxed">
-                        نؤمن بأن الأنظمة المنعزلة تهدر الوقت وتسبب الأخطاء الإدارية. ركيزتنا الأولى هي إرساء مبدأ "التزامن" (Sync)؛ ربط أنظمة المؤسسة المالية والإدارية ببعضها البعض، ومزامنة الفروع المختلفة لتدفق البيانات بشكل موحد وبلا انقطاع.
+                        <span class="lang-ar">نؤمن بأن الأنظمة المنعزلة تهدر الوقت وتسبب الأخطاء الإدارية. ركيزتنا الأولى هي إرساء مبدأ "التزامن" (Sync)؛ ربط أنظمة المؤسسة المالية والإدارية ببعضها البعض، ومزامنة الفروع المختلفة لتدفق البيانات بشكل موحد وبلا انقطاع.</span>
+                        <span class="lang-en">We believe isolated software wastes hours and invites administrative errors. Our first pillar is Synchronization (Sync): stitching financial, inventory, and staff databases into a unified flow.</span>
                     </p>
                 </div>
             </div>
@@ -64,9 +91,13 @@
                     <span class="font-headline-xl text-5xl opacity-10 text-primary font-bold">02</span>
                 </div>
                 <div class="z-10">
-                    <h2 class="font-headline-md text-headline-md text-primary font-bold mb-3">الحماية والأمن السيبراني / Security</h2>
+                    <h2 class="font-headline-md text-headline-md text-primary font-bold mb-3">
+                        <span class="lang-ar">الحماية والأمن السيبراني / Security</span>
+                        <span class="lang-en">Security & Threat Mitigation</span>
+                    </h2>
                     <p class="font-body-md text-on-surface-variant leading-relaxed">
-                        المنظومة الرقمية القوية هي منظومة محصنة. الأمان ليس ميزة إضافية، بل هو حجر أساس نضعه في كل سلك وشاشة. نطبق أعلى بروتوكولات الأمان لحماية قواعد البيانات من الاختراق، وحماية الشبكات بجدران حماية ومراقبة لحظر الهجمات.
+                        <span class="lang-ar">المنظومة الرقمية القوية هي منظومة محصنة. الأمان ليس ميزة إضافية، بل هو حجر أساس نضعه في كل سلك وشاشة. نطبق أعلى بروتوكولات الأمان لحماية قواعد البيانات من الاختراق، وحماية الشبكات بجدران حماية ومراقبة لحظر الهجمات.</span>
+                        <span class="lang-en">Strong digital systems must be secure systems. Threat mitigation is not an add-on; it is a foundation. We apply encryption standards, configure firewalls, and guard networks against breaches.</span>
                     </p>
                 </div>
             </div>
@@ -82,9 +113,13 @@
                     <span class="font-headline-xl text-5xl opacity-10 text-primary font-bold">03</span>
                 </div>
                 <div class="z-10">
-                    <h2 class="font-headline-md text-headline-md text-primary font-bold mb-3">تحسين ومواءمة الأداء / Optimization</h2>
+                    <h2 class="font-headline-md text-headline-md text-primary font-bold mb-3">
+                        <span class="lang-ar">تحسين ومواءمة الأداء / Optimization</span>
+                        <span class="lang-en">Optimization & Efficiency</span>
+                    </h2>
                     <p class="font-body-md text-on-surface-variant leading-relaxed">
-                        التقنية تخدم الأعمال وليس العكس. مواءمة التقنية مع سياسات شركتك توفر على الموظفين ساعات العمل اليدوية وتعزز قدرتهم على الإنتاج. نركز على جعل تجربة استخدام الأنظمة واضحة، سريعة، وموجهة لتحقيق الكفاءة القصوى.
+                        <span class="lang-ar">التقنية تخدم الأعمال وليس العكس. مواءمة التقنية مع سياسات شركتك توفر على الموظفين ساعات العمل اليدوية وتعزز قدرتهم على الإنتاج. نركز على جعل تجربة استخدام الأنظمة واضحة، سريعة، وموجهة لتحقيق الكفاءة القصوى.</span>
+                        <span class="lang-en">Technology serves business, not the other way around. Aligning systems with your workflow cuts repetitive tasks and boosts staff capacity. We focus on providing clear, fast, efficient portals.</span>
                     </p>
                 </div>
             </div>
@@ -100,9 +135,13 @@
                     <span class="font-headline-xl text-5xl opacity-10 text-primary font-bold">04</span>
                 </div>
                 <div class="z-10">
-                    <h2 class="font-headline-md text-headline-md text-primary font-bold mb-3">الاستدامة والدعم المستمر / Care</h2>
+                    <h2 class="font-headline-md text-headline-md text-primary font-bold mb-3">
+                        <span class="lang-ar">الاستدامة والدعم المستمر / Care</span>
+                        <span class="lang-en">Continuous Care & SLA Support</span>
+                    </h2>
                     <p class="font-body-md text-on-surface-variant leading-relaxed">
-                        الشريك الاستراتيجي يرافقك طوال الطريق. عندما ينمو شريكنا وتتغير احتياجاته، نكون مستعدين دائمًا لتحديث وترقية البنية التحتية، وتوفير الدعم الفني السريع لحل المشاكل التقنية في أي وقت لضمان سير أعمالك بلا انقطاع.
+                        <span class="lang-ar">الشريك الاستراتيجي يرافقك طوال الطريق. عندما ينمو شريكنا وتتغير احتياجاته، نكون مستعدين دائمًا لتحديث وترقية البنية التحتية، وتوفير الدعم الفني السريع لحل المشاكل التقنية في أي وقت لضمان سير أعمالك بلا انقطاع.</span>
+                        <span class="lang-en">A strategic partner goes the distance. As your business grows and your requirements evolve, we adjust your infrastructure, provisioning fast technical support and updates.</span>
                     </p>
                 </div>
             </div>
@@ -110,20 +149,31 @@
 
         <!-- Detailed Pillar Vision banner -->
         <div class="bg-surface-container-low rounded-3xl p-8 md:p-12 border border-surface-variant text-center mb-12">
-            <h3 class="font-headline-lg text-headline-lg text-primary mb-4 font-bold">نهجنا يضمن الاستمرارية والنمو المتزن</h3>
+            <h3 class="font-headline-lg text-headline-lg text-primary mb-4 font-bold">
+                <span class="lang-ar">نهجنا يضمن الاستمرارية والنمو المتزن</span>
+                <span class="lang-en">Our Cohesive Methodology Assures Continuity</span>
+            </h3>
             <p class="font-body-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed">
-                إن التقاء هذه الركائز الأربعة في نهج سينك هو ما يجعلنا مختلفين. نحن لا نبني نظامًا معزولاً أو نقوم بتوصيل كابلات شبكة فحسب؛ بل نصنع أساساً رقمياً متماسكاً يدفع مؤسستك نحو المستقبل بأمان مطلق وثقة عالية.
+                <span class="lang-ar">إن التقاء هذه الركائز الأربعة في نهج سينك هو ما يجعلنا مختلفين. نحن لا نبني نظامًا معزولاً أو نقوم بتوصيل كابلات شبكة فحسب؛ بل نصنع أساساً رقمياً متماسكاً يدفع مؤسستك نحو المستقبل بأمان مطلق وثقة عالية.</span>
+                <span class="lang-en">The intersection of these four pillars is what makes Sync unique. We do not just link database servers or set firewall ports; we craft a solid digital environment that carries your business into the future.</span>
             </p>
         </div>
 
         <!-- Consultation Banner -->
         <div class="w-full bg-secondary text-on-secondary rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between ambient-shadow-sm">
             <div class="max-w-xl">
-                <h3 class="font-headline-md text-headline-md mb-2 font-bold">ابدأ بتطبيق الركائز الأربعة في أعمالك</h3>
-                <p class="font-body-md text-body-md text-secondary-fixed-dim">تحدث مع خبرائنا اليوم لتحديد ركائز التطوير المطلوبة لمؤسستك.</p>
+                <h3 class="font-headline-md text-headline-md mb-2 font-bold">
+                    <span class="lang-ar">ابدأ بتطبيق الركائز الأربعة في أعمالك</span>
+                    <span class="lang-en">Apply Our Four Pillars to Your Business</span>
+                </h3>
+                <p class="font-body-md text-body-md text-secondary-fixed-dim">
+                    <span class="lang-ar">تحدث مع خبرائنا اليوم لتحديد ركائز التطوير المطلوبة لمؤسستك.</span>
+                    <span class="lang-en">Talk to our engineering team today to identify integration requirements for your company.</span>
+                </p>
             </div>
             <a href="contact.html" class="mt-6 md:mt-0 bg-on-secondary text-secondary hover:bg-surface hover:text-primary px-8 py-4 rounded-full font-label-md text-label-md btn-hover whitespace-nowrap">
-                تواصل معنا لبدء الدراسة / Contact Sync
+                <span class="lang-ar">تواصل معنا لبدء الدراسة</span>
+                <span class="lang-en">Contact Sync to Start</span>
             </a>
         </div>
     </main>

@@ -3,7 +3,21 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Sync | سينك - شريكك الاستراتيجي</title>
+    
+    <!-- Sync/Home Title -->
+    <title>Sync/Home</title>
+    
+    <!-- Website Favicon inside Browser Tab -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <!-- Startup Language Script (Executes immediately to avoid flash of unstyled direction) -->
+    <script>
+        (function() {
+            const savedLang = localStorage.getItem('sync-lang') || 'ar';
+            document.documentElement.lang = savedLang;
+            document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
+        })();
+    </script>
     
     <!-- Material Icons & IBM Plex Arabic Font -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
@@ -20,7 +34,7 @@
 </head>
 <body class="text-on-surface bg-background antialiased selection:bg-secondary-container selection:text-on-secondary-container min-h-screen flex flex-col pt-20">
 
-    <!-- Global Header Placeholder (loaded dynamically) -->
+    <!-- Global Header Placeholder -->
     <header id="global-header"></header>
 
     <!-- Hero Section -->
@@ -33,39 +47,61 @@
             </div>
             
             <div class="flex-1 z-10 flex flex-col gap-6 items-start text-right">
-                <img alt="Sync Brand Logo" class="h-20 w-20 rounded-xl mb-2 ambient-shadow-sm border border-outline-variant/30" src="https://lh3.googleusercontent.com/aida/ADBb0ugXEp-4-joNgCjowYWbiwVaxWqHV6rnSnEvqgyGzYkEQPakvHQlXIXFPkzNoqPBk90DzSVg1JcdZNWd5Ss8v1hJkB0Ye3KtXO-DnYg2-4yxI1ehzMxKMmk7AMCkAWkEaocyNArgzyXiebRenCIxGd5rMTXvQw0akjU4bE8HEIUMR6up6p_F6rhzaO9ei7wC5-UmdPHK0TIwbunXqRYckXToxipecgh9kmWu8Lcr8Sn4_8E3KobGKZJOYA">
+                <!-- Transparent Brand Logo -->
+                <img alt="Sync Logo" class="h-20 w-auto mb-2" src="logo.png">
+                
                 <div class="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full w-fit">
                     <span class="material-symbols-outlined text-sm">hub</span>
-                    <span class="font-label-md text-label-md font-bold">شريك استراتيجي / Strategic Partner</span>
+                    <span class="font-label-md text-label-md font-bold">
+                        <span class="lang-ar">شريك استراتيجي</span>
+                        <span class="lang-en">Strategic Partner</span>
+                    </span>
                 </div>
+                
                 <h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary leading-tight">
-                    شريكك الاستراتيجي لإدارة رقمية متكاملة.
+                    <span class="lang-ar">شريكك الاستراتيجي لإدارة رقمية متكاملة.</span>
+                    <span class="lang-en">Your Strategic Partner for Integrated Digital Management.</span>
                 </h1>
+                
                 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
-                    سينك (Sync) هي شريكك الاستراتيجي المتكامل لتسيير وإدارة العمليات الرقمية. نؤمن بأن استقرار ونمو المشاريع والمؤسسات المتوسطة والكبيرة يعتمد بشكل أساسي على تكامل أنظمتها، واستقرار شبكاتها، وتأمين بنيتها التحتية ضد المخاطر السيبرانية.
+                    <span class="lang-ar">سينك (Sync) هي شريكك الاستراتيجي المتكامل لتسيير وإدارة العمليات الرقمية. نؤمن بأن استقرار ونمو المشاريع والمؤسسات المتوسطة والكبيرة يعتمد بشكل أساسي على تكامل أنظمتها، واستقرار شبكاتها، وتأمين بنيتها التحتية ضد المخاطر السيبرانية.</span>
+                    <span class="lang-en">Sync is your integrated strategic partner for digital operations management. We believe that the stability and growth of medium and large enterprises depend fundamentally on system integration, network stability, and secure infrastructure.</span>
                 </p>
+                
                 <div class="flex flex-wrap gap-4 mt-2">
                     <a href="contact.html" class="bg-primary text-on-primary hover:bg-secondary hover:text-on-secondary px-8 py-4 rounded-full font-label-md text-label-md btn-hover flex items-center gap-2">
-                        ابدأ التحول الرقمي / Start Digital
+                        <span class="lang-ar">ابدأ التحول الرقمي</span>
+                        <span class="lang-en">Start Digital</span>
                         <span class="material-symbols-outlined">arrow_outward</span>
                     </a>
                     <a href="about.html" class="bg-surface text-primary border border-outline-variant px-8 py-4 rounded-full font-label-md text-label-md btn-hover flex items-center gap-2">
-                        تعرف علينا / About Us
+                        <span class="lang-ar">تعرف علينا</span>
+                        <span class="lang-en">About Us</span>
                     </a>
                 </div>
+                
                 <!-- Trust Metrics -->
                 <div class="flex flex-wrap gap-8 mt-6 pt-6 border-t border-outline-variant/30 w-full">
                     <div>
                         <div class="font-headline-md text-headline-md text-primary font-bold">99.9%</div>
-                        <div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-1">Uptime / استقرار الأنظمة</div>
+                        <div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-1">
+                            <span class="lang-ar">استقرار الأنظمة</span>
+                            <span class="lang-en">Systems Uptime</span>
+                        </div>
                     </div>
                     <div>
                         <div class="font-headline-md text-headline-md text-primary font-bold">24/7</div>
-                        <div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-1">Support / دعم فني</div>
+                        <div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-1">
+                            <span class="lang-ar">دعم فني متواصل</span>
+                            <span class="lang-en">Continuous Support</span>
+                        </div>
                     </div>
                     <div>
                         <div class="font-headline-md text-headline-md text-primary font-bold">100+</div>
-                        <div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-1">Integrations / ربط رقمي</div>
+                        <div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-1">
+                            <span class="lang-ar">عمليات الربط الرقمي</span>
+                            <span class="lang-en">Digital Integrations</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -79,7 +115,10 @@
     <!-- Client Logos Section -->
     <section class="py-12 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-y border-outline-variant/20 overflow-hidden">
         <div class="max-w-[1440px] mx-auto text-center">
-            <h2 class="font-label-md text-label-md text-on-surface-variant mb-6 uppercase tracking-wider">شركاء النجاح / Trusted by</h2>
+            <h2 class="font-label-md text-label-md text-on-surface-variant mb-6 uppercase tracking-wider">
+                <span class="lang-ar">شركاء النجاح</span>
+                <span class="lang-en">Trusted by</span>
+            </h2>
             <div dir="ltr">
                 <div class="flex flex-wrap justify-center gap-12 items-center opacity-60 grayscale mix-blend-multiply">
                     <img alt="Client Logo 1" class="h-12 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWnOjwIveEa8Jy5guMiiuwmuuqWHqeP_3GU_DhZt9EVls82S21yk3WZppNoa9uYwvnkMCi0od_bp6N4NJ9RU3SRZC-2kd0U-f1zCzFOyLrijXUSFktpKHm5xODLz1OHFcf9y6RBkUmmk2BzCwDd9wryqvmtasLiM2xFizjcRd7EwSfYtBAyrzD9fT_7YN9UdimkHvOecjz_I18yXjy0AnShAGchRls0RdanTUGAbGRw4arf5yYlVXtcMiRdzLN8myYGbJPmp3Dy0ZF">
@@ -96,8 +135,14 @@
     <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-highest/30" id="capabilities-section">
         <div class="max-w-[1440px] mx-auto">
             <div class="text-center mb-16">
-                <h2 class="font-headline-lg text-headline-lg text-primary mb-4 font-bold">حلولنا الاستراتيجية / Core Capabilities</h2>
-                <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">نصمم ونبني منظومات تقنية متكاملة لربط مفاصل شركتك وتأمينها بكفاءة.</p>
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-4 font-bold">
+                    <span class="lang-ar">حلولنا الاستراتيجية</span>
+                    <span class="lang-en">Our Strategic Solutions</span>
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                    <span class="lang-ar">نصمم ونبني منظومات تقنية متكاملة لربط مفاصل شركتك وتأمينها بكفاءة.</span>
+                    <span class="lang-en">We design and build integrated tech systems to connect and secure your enterprise.</span>
+                </p>
             </div>
             
             <div class="flex flex-col gap-gutter">
@@ -108,9 +153,13 @@
                         <div class="w-14 h-14 bg-primary text-on-primary rounded-2xl flex items-center justify-center mb-6">
                             <span class="material-symbols-outlined text-2xl">account_tree</span>
                         </div>
-                        <h3 class="font-headline-lg text-headline-lg text-primary mb-4 font-bold">تخصيص نظام ERPNext / ERPNext Customization</h3>
+                        <h3 class="font-headline-lg text-headline-lg text-primary mb-4 font-bold">
+                            <span class="lang-ar">تخصيص نظام ERPNext</span>
+                            <span class="lang-en">ERPNext Customization</span>
+                        </h3>
                         <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
-                            نبني لك نظام تخطيط موارد مخصص بالكامل ERPNext يتطابق مع آليات عملك، ويسهل إدارة المبيعات، الحسابات، الموارد البشرية، والمستودعات في شاشة واحدة.
+                            <span class="lang-ar">نبني لك نظام تخطيط موارد مخصص بالكامل ERPNext يتطابق مع آليات عملك، ويسهل إدارة المبيعات، الحسابات، الموارد البشرية، والمستودعات في شاشة واحدة.</span>
+                            <span class="lang-en">We build customized ERPNext systems matching your business operations, simplifying sales, accounts, HR, and warehouses in a single view.</span>
                         </p>
                         <div class="flex flex-wrap gap-3">
                             <span class="px-4 py-2 bg-surface-container-high rounded-lg font-label-md text-primary font-mono border border-outline-variant/30">Frappe</span>
@@ -131,9 +180,13 @@
                             <div class="w-14 h-14 bg-surface-tint text-on-primary rounded-2xl flex items-center justify-center mb-6">
                                 <span class="material-symbols-outlined text-2xl">router</span>
                             </div>
-                            <h3 class="font-headline-md text-headline-md text-on-primary mb-3 font-bold">الشبكات والأمن / Networks & Security</h3>
+                            <h3 class="font-headline-md text-headline-md text-on-primary mb-3 font-bold">
+                                <span class="lang-ar">الشبكات والأمن</span>
+                                <span class="lang-en">Networks & Security</span>
+                            </h3>
                             <p class="font-body-md text-body-md text-primary-fixed-dim mb-6 leading-relaxed">
-                                نضمن استقرار اتصالات شركتك، ونبني شبكات داخلية معقدة ومحمية بـجدران حماية متقدمة، لضمان استقرار العمليات وحفظ سرية المعلومات.
+                                <span class="lang-ar">نضمن استقرار اتصالات شركتك، ونبني شبكات داخلية معقدة ومحمية بـجدران حماية متقدمة، لضمان استقرار العمليات وحفظ سرية المعلومات.</span>
+                                <span class="lang-en">We secure stable connectivity and build complex internal networks protected by enterprise firewalls to ensure operation continuity.</span>
                             </p>
                         </div>
                         <div class="z-10 relative mt-auto pt-8">
@@ -147,14 +200,19 @@
                             <div class="w-14 h-14 bg-surface-container-high text-on-surface rounded-2xl flex items-center justify-center mb-6">
                                 <span class="material-symbols-outlined text-2xl">architecture</span>
                             </div>
-                            <h3 class="font-headline-md text-headline-md text-primary mb-3 font-bold">تسيير ومواءمة الأعمال / Business Alignment</h3>
+                            <h3 class="font-headline-md text-headline-md text-primary mb-3 font-bold">
+                                <span class="lang-ar">تسيير ومواءمة الأعمال</span>
+                                <span class="lang-en">Business Alignment</span>
+                            </h3>
                             <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                                لا نقوم بتنصيب البرامج فحسب، بل نقوم بمواءمة آليات العمل والسياسات الداخلية لشركتك لتتكامل مع التحول الرقمي وتضمن تحقيق أعلى أداء للموظفين.
+                                <span class="lang-ar">لا نقوم بتنصيب البرامج فحسب، بل نقوم بمواءمة آليات العمل والسياسات الداخلية لشركتك لتتكامل مع التحول الرقمي وتضمن تحقيق أعلى أداء للموظفين.</span>
+                                <span class="lang-en">We align operational workflows and internal policies to integrate with the digital transformation, optimizing employee performance.</span>
                             </p>
                         </div>
                         <div class="mt-8 flex items-center gap-2 text-primary font-label-md text-label-md cursor-pointer group-hover:gap-4 transition-all w-fit">
                             <a href="capabilities.html" class="flex items-center gap-2">
-                                <span>اكتشف المزيد / Discover More</span>
+                                <span class="lang-ar">اكتشف المزيد</span>
+                                <span class="lang-en">Discover More</span>
                                 <span class="material-symbols-outlined text-sm">arrow_left_alt</span>
                             </a>
                         </div>
@@ -164,11 +222,18 @@
                 <!-- Call to Action Banner -->
                 <div class="w-full bg-secondary text-on-secondary rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between ambient-shadow-sm mt-4 text-right">
                     <div class="max-w-xl">
-                        <h3 class="font-headline-md text-headline-md mb-2 font-bold">جاهز لتطوير وتأمين مؤسستك؟</h3>
-                        <p class="font-body-md text-body-md text-secondary-fixed-dim">تواصل مع فريق الاستشاريين لدينا الآن لبناء خطتك المخصصة.</p>
+                        <h3 class="font-headline-md text-headline-md mb-2 font-bold">
+                            <span class="lang-ar">جاهز لتطوير وتأمين مؤسستك؟</span>
+                            <span class="lang-en">Ready to develop and secure your enterprise?</span>
+                        </h3>
+                        <p class="font-body-md text-body-md text-secondary-fixed-dim">
+                            <span class="lang-ar">تواصل مع فريق الاستشاريين لدينا الآن لبناء خطتك المخصصة.</span>
+                            <span class="lang-en">Contact our consultancy team now to craft your customized integration roadmap.</span>
+                        </p>
                     </div>
                     <a href="contact.html" class="mt-6 md:mt-0 bg-on-secondary text-secondary hover:bg-surface hover:text-primary px-8 py-4 rounded-full font-label-md text-label-md btn-hover whitespace-nowrap">
-                        تواصل معنا الآن / Contact Us
+                        <span class="lang-ar">تواصل معنا الآن</span>
+                        <span class="lang-en">Contact Us Now</span>
                     </a>
                 </div>
             </div>
@@ -179,8 +244,14 @@
     <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface w-full">
         <div class="max-w-[1440px] mx-auto">
             <div class="text-center mb-16">
-                <h2 class="font-headline-lg text-headline-lg text-primary mb-4 font-bold">بيئة العمل والتقنيات / Technologies</h2>
-                <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">نعتمد على بيئات برمجية وأمنية معتمدة عالميًا لضمان قوة واستقرار الحلول.</p>
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-4 font-bold">
+                    <span class="lang-ar">بيئة العمل والتقنيات</span>
+                    <span class="lang-en">Technologies & Environment</span>
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                    <span class="lang-ar">نعتمد على بيئات برمجية وأمنية معتمدة عالميًا لضمان قوة واستقرار الحلول.</span>
+                    <span class="lang-en">We utilize industry-grade software and security architectures to deliver robust integrations.</span>
+                </p>
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
@@ -228,47 +299,84 @@
     <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low w-full">
         <div class="max-w-[1440px] mx-auto">
             <div class="text-center mb-16">
-                <h2 class="font-headline-lg text-headline-lg text-primary mb-4 font-bold">منهجية العمل / Core Process</h2>
-                <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">خطوات مدروسة تضمن نجاح عملية التحول الرقمي وحماية مؤسستك.</p>
+                <h2 class="font-headline-lg text-headline-lg text-primary mb-4 font-bold">
+                    <span class="lang-ar">منهجية العمل</span>
+                    <span class="lang-en">Work Process</span>
+                </h2>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                    <span class="lang-ar">خطوات مدروسة تضمن نجاح عملية التحول الرقمي وحماية مؤسستك.</span>
+                    <span class="lang-en">Calculated stages that assure successful digital transformation and threat mitigation.</span>
+                </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter text-right">
                 <!-- Phase 1 -->
                 <div class="bg-surface p-8 rounded-3xl border border-outline-variant/20 ambient-shadow-sm flex flex-col gap-4">
-                    <div class="w-12 h-12 bg-primary/5 text-primary rounded-full flex items-center justify-center font-bold text-lg">01</div>
-                    <h3 class="font-headline-md text-headline-md text-primary font-bold">التحليل والتقييم / Analysis</h3>
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full font-label-sm text-label-sm font-bold">
+                            <span class="lang-ar">المرحلة الأولى</span>
+                            <span class="lang-en">Phase 01</span>
+                        </span>
+                        <span class="material-symbols-outlined text-primary text-2xl">analytics</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary font-bold">
+                        <span class="lang-ar">التحليل والتقييم</span>
+                        <span class="lang-en">Analysis & Assessment</span>
+                    </h3>
                     <p class="font-body-md text-on-surface-variant leading-relaxed">
-                        ندرس بنية الأنظمة والشبكات الحالية لشركتك، ونحدد الفجوات الأمنية ومواطن عدم الكفاءة.
+                        <span class="lang-ar">ندرس بنية الأنظمة والشبكات الحالية لشركتك، ونحدد الفجوات الأمنية ومواطن عدم الكفاءة.</span>
+                        <span class="lang-en">We audit current systems and network stability, mapping security loopholes and operational bottlenecks.</span>
                     </p>
                 </div>
                 <!-- Phase 2 -->
                 <div class="bg-surface p-8 rounded-3xl border border-outline-variant/20 ambient-shadow-sm flex flex-col gap-4">
-                    <div class="w-12 h-12 bg-primary/5 text-primary rounded-full flex items-center justify-center font-bold text-lg">02</div>
-                    <h3 class="font-headline-md text-headline-md text-primary font-bold">التنفيذ والربط / Implementation</h3>
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 bg-secondary/10 text-secondary rounded-full font-label-sm text-label-sm font-bold">
+                            <span class="lang-ar">المرحلة الثانية</span>
+                            <span class="lang-en">Phase 02</span>
+                        </span>
+                        <span class="material-symbols-outlined text-primary text-2xl">settings_ethernet</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md text-primary font-bold">
+                        <span class="lang-ar">التنفيذ والربط</span>
+                        <span class="lang-en">Implementation & Integration</span>
+                    </h3>
                     <p class="font-body-md text-on-surface-variant leading-relaxed">
-                        نقوم بتخصيص ERPNext، وإعداد الشبكات وتجربة جدران الحماية للتأكد من استقرارية الحلول.
+                        <span class="lang-ar">نقوم بتخصيص ERPNext، وإعداد الشبكات وتجربة جدران الحماية للتأكد من استقرارية الحلول.</span>
+                        <span class="lang-en">We customize the ERPNext modules, program interfaces, and install secure network firewall rules.</span>
                     </p>
                 </div>
                 <!-- Phase 3 -->
                 <div class="bg-primary text-on-primary p-8 rounded-3xl ambient-shadow-md flex flex-col gap-4">
-                    <div class="w-12 h-12 bg-on-primary/10 text-on-primary rounded-full flex items-center justify-center font-bold text-lg">03</div>
-                    <h3 class="font-headline-md text-headline-md font-bold">الدعم الفني المستدام / Continuous Care</h3>
+                    <div class="flex items-center justify-between">
+                        <span class="px-3 py-1 bg-on-primary/10 text-on-primary rounded-full font-label-sm text-label-sm font-bold">
+                            <span class="lang-ar">المرحلة الثالثة</span>
+                            <span class="lang-en">Phase 03</span>
+                        </span>
+                        <span class="material-symbols-outlined text-on-primary text-2xl">support_agent</span>
+                    </div>
+                    <h3 class="font-headline-md text-headline-md font-bold">
+                        <span class="lang-ar">الدعم الفني المستدام</span>
+                        <span class="lang-en">Continuous Care</span>
+                    </h3>
                     <p class="font-body-md opacity-90 leading-relaxed">
-                        نوفر حماية ومراقبة مستمرة للشبكات، ودعم فني دوري لتحديث البرمجيات ومجابهة الثغرات الرقمية أولاً بأول.
+                        <span class="lang-ar">نوفر حماية ومراقبة مستمرة للشبكات، ودعم فني دوري لتحديث البرمجيات ومجابهة الثغرات الرقمية أولاً بأول.</span>
+                        <span class="lang-en">We deliver 24/7 network health monitoring, periodic software patching, and security system updates.</span>
                     </p>
                 </div>
             </div>
             
             <div class="text-center mt-12">
                 <a href="process.html" class="inline-flex items-center gap-2 text-secondary hover:text-primary font-label-md text-label-md font-semibold">
-                    <span>تفاصيل العملية بالكامل / Full Process Details</span>
+                    <span class="lang-ar">تفاصيل العملية بالكامل</span>
+                    <span class="lang-en">Full Process Details</span>
                     <span class="material-symbols-outlined">arrow_left_alt</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Global Footer Placeholder (loaded dynamically) -->
+    <!-- Global Footer Placeholder -->
     <footer id="global-footer"></footer>
 
     <!-- Global Modals Container -->
