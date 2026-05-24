@@ -1,113 +1,63 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html lang="ar" dir="rtl" data-title-ar="القدرات والحلول | Sync" data-title-en="Capabilities & Solutions | Sync">
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>القدرات والحلول | Sync</title>
     
-    <!-- Sync/Capabilities Title -->
-    <title>Sync/Capabilities</title>
-    
-    <!-- Website Favicon inside Browser Tab -->
-    <link rel="icon" type="image/png" href="logo.png">
-    
-    <!-- Startup Language Script (Executes immediately to avoid flash of unstyled direction) -->
-    <script>
-        (function() {
-            const savedLang = localStorage.getItem('sync-lang') || 'ar';
-            document.documentElement.lang = savedLang;
-            document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
-        })();
-    </script>
-    
-    <!-- Material Icons & IBM Plex Arabic Font -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS (via CDN) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="js/tailwind-config.js"></script>
-    
-    <!-- Custom Style Sheet -->
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body class="text-on-surface bg-background antialiased selection:bg-secondary-container selection:text-on-secondary-container min-h-screen flex flex-col pt-20">
 
-    <!-- Global Header Placeholder -->
     <header id="global-header"></header>
 
-    <!-- Main Content Container -->
-    <main class="flex-grow pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full pt-12 text-right">
+    <main class="flex-grow pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full pt-12" data-align-ar="text-right" data-align-en="text-left">
         <!-- Hero Header -->
         <div class="text-center mb-16">
             <div class="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full w-fit mb-6 mx-auto">
                 <span class="material-symbols-outlined text-sm">settings_suggest</span>
-                <span class="font-label-md text-label-md font-bold">
-                    <span class="lang-ar">حلولنا الاستراتيجية</span>
-                    <span class="lang-en">Our Capabilities</span>
-                </span>
+                <span class="font-label-md text-label-md font-bold" data-ar="حلولنا الاستراتيجية" data-en="Our Capabilities">حلولنا الاستراتيجية</span>
             </div>
-            <h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-4 font-bold">
-                <span class="lang-ar">قدرات رقمية شاملة تحت سقف واحد</span>
-                <span class="lang-en">Comprehensive Digital Capabilities Under One Roof</span>
-            </h1>
-            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
-                <span class="lang-ar">نساعد مؤسستك على الانتقال إلى نموذج عمل رقمي متكامل، آمن، ومبني على أسس هندسية متينة.</span>
-                <span class="lang-en">We help your organization transition to an integrated, secure digital operations model built on solid engineering foundations.</span>
-            </p>
+            <h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-4 font-bold" data-ar="قدرات رقمية شاملة تحت سقف واحد" data-en="Comprehensive Digital Capabilities Under One Roof">قدرات رقمية شاملة تحت سقف واحد</h1>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto" data-ar="نساعد مؤسستك على الانتقال إلى نموذج عمل رقمي متكامل، آمن، ومبني على أسس هندسية متينة." data-en="We help your organization transition to an integrated, secure digital business model built on solid engineering foundations.">نساعد مؤسستك على الانتقال إلى نموذج عمل رقمي متكامل، آمن، ومبني على أسس هندسية متينة.</p>
         </div>
 
         <!-- Capability 1: ERPNext Customization -->
         <section class="bg-surface rounded-3xl p-8 md:p-12 border border-outline-variant/20 ambient-shadow-sm flex flex-col lg:flex-row items-center gap-12 mb-12 relative overflow-hidden">
-            <div class="flex-1 lg:order-1 text-right">
+            <div class="flex-1 lg:order-1">
                 <div class="w-14 h-14 bg-primary text-on-primary rounded-2xl flex items-center justify-center mb-6">
                     <span class="material-symbols-outlined text-2xl">account_tree</span>
                 </div>
-                <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-lg text-primary mb-4 font-bold">
-                    <span class="lang-ar">تخصيص وتطوير نظام ERPNext</span>
-                    <span class="lang-en">ERPNext Customization & Development</span>
-                </h2>
-                <p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
-                    <span class="lang-ar">نظام ERPNext هو واحد من أقوى الأنظمة مفتوحة المصدر لإدارة الموارد. في سينك، نتجاوز مجرد التنصيب التقليدي؛ نقوم بإعادة بناء النظام ليناسب دورتك المستندية الدقيقة.</span>
-                    <span class="lang-en">ERPNext is one of the most robust open-source resource planning systems. At Sync, we go beyond typical installations; we redesign and optimize the system to match your custom business cycles.</span>
+                <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-lg text-primary mb-4 font-bold" data-ar="تخصيص وتطوير نظام ERPNext" data-en="ERPNext Customization & Development">تخصيص وتطوير نظام ERPNext</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed" data-ar="نظام ERPNext هو واحد من أقوى الأنظمة مفتوحة المصدر لإدارة الموارد. في سينك، نتجاوز مجرد التنصيب التقليدي؛ نقوم بإعادة بناء النظام ليناسب دورتك المستندية الدقيقة." data-en="ERPNext is one of the most powerful open-source resource management systems. At Sync, we go beyond traditional installation — we rebuild the system to match your precise document workflows.">
+                    نظام ERPNext هو واحد من أقوى الأنظمة مفتوحة المصدر لإدارة الموارد. في سينك، نتجاوز مجرد التنصيب التقليدي؛ نقوم بإعادة بناء النظام ليناسب دورتك المستندية الدقيقة.
                 </p>
                 <div class="space-y-4 mb-8">
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
                         <div>
-                            <h4 class="font-headline-md text-base text-primary font-bold">
-                                <span class="lang-ar">إدارة المالية والمحاسبة الذكية</span>
-                                <span class="lang-en">Smart Financials & Accounts</span>
-                            </h4>
-                            <p class="font-body-md text-on-surface-variant">
-                                <span class="lang-ar">تخصيص الفواتير، القيود اليومية، وإصدار التقارير المالية المتوافقة مع القوانين المحلية.</span>
-                                <span class="lang-en">Customizing invoices, double-entries, tax parameters, and local compliance financial reports.</span>
-                            </p>
+                            <h4 class="font-headline-md text-base text-primary font-bold" data-ar="إدارة المالية والمحاسبة الذكية" data-en="Smart Finance & Accounting Management">إدارة المالية والمحاسبة الذكية</h4>
+                            <p class="font-body-md text-on-surface-variant" data-ar="تخصيص الفواتير، القيود اليومية، وإصدار التقارير المالية المتوافقة مع القوانين المحلية." data-en="Customizing invoices, journal entries, and generating financial reports compliant with local regulations.">تخصيص الفواتير، القيود اليومية، وإصدار التقارير المالية المتوافقة مع القوانين المحلية.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
                         <div>
-                            <h4 class="font-headline-md text-base text-primary font-bold">
-                                <span class="lang-ar">المستودعات وسلاسل الإمداد</span>
-                                <span class="lang-en">Warehouse & Supply Chain</span>
-                            </h4>
-                            <p class="font-body-md text-on-surface-variant">
-                                <span class="lang-ar">تتبع المخزون اللحظي، التنبيه بنقاط إعادة الطلب، وتسهيل عمليات الشراء والتوريد.</span>
-                                <span class="lang-en">Real-time inventory mapping, reorder triggers, purchase workflows, and vendor coordination.</span>
-                            </p>
+                            <h4 class="font-headline-md text-base text-primary font-bold" data-ar="المستودعات وسلاسل الإمداد" data-en="Warehousing & Supply Chains">المستودعات وسلاسل الإمداد</h4>
+                            <p class="font-body-md text-on-surface-variant" data-ar="تتبع المخزون اللحظي، التنبيه بنقاط إعادة الطلب، وتسهيل عمليات الشراء والتوريد." data-en="Real-time inventory tracking, reorder point alerts, and streamlined procurement and supply operations.">تتبع المخزون اللحظي، التنبيه بنقاط إعادة الطلب، وتسهيل عمليات الشراء والتوريد.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
                         <div>
-                            <h4 class="font-headline-md text-base text-primary font-bold">
-                                <span class="lang-ar">الموارد البشرية وكشوف المرتبات</span>
-                                <span class="lang-en">Human Resources & Payroll</span>
-                            </h4>
-                            <p class="font-body-md text-on-surface-variant">
-                                <span class="lang-ar">أتمتة الحضور والانصراف، الهياكل التنظيمية، وحساب الرواتب والبدلات.</span>
-                                <span class="lang-en">Automating attendance tracking, shifts, org charts, salaries, slips, and benefits calculations.</span>
-                            </p>
+                            <h4 class="font-headline-md text-base text-primary font-bold" data-ar="الموارد البشرية وكشوف المرتبات" data-en="HR & Payroll">الموارد البشرية وكشوف المرتبات</h4>
+                            <p class="font-body-md text-on-surface-variant" data-ar="أتمتة الحضور والانصراف، الهياكل التنظيمية، وحساب الرواتب والبدلات." data-en="Automating attendance tracking, organizational structures, and salary & allowance calculations.">أتمتة الحضور والانصراف، الهياكل التنظيمية، وحساب الرواتب والبدلات.</p>
                         </div>
                     </div>
                 </div>
@@ -125,56 +75,34 @@
         <!-- Capability 2: Networks & Security -->
         <section class="bg-inverse-surface text-inverse-on-surface rounded-3xl p-8 md:p-12 flex flex-col lg:flex-row items-center gap-12 mb-12 relative overflow-hidden">
             <div class="absolute top-0 left-0 w-96 h-96 bg-primary-fixed-dim/5 rounded-br-full -z-0"></div>
-            <div class="flex-1 text-right z-10">
+            <div class="flex-1 z-10">
                 <div class="w-14 h-14 bg-surface-tint text-on-primary rounded-2xl flex items-center justify-center mb-6">
                     <span class="material-symbols-outlined text-2xl">shield</span>
                 </div>
-                <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-lg text-on-primary mb-4 font-bold">
-                    <span class="lang-ar">هندسة الشبكات والحلول الأمنية</span>
-                    <span class="lang-en">Network Engineering & Security Solutions</span>
-                </h2>
-                <p class="font-body-lg text-body-lg text-primary-fixed-dim mb-6 leading-relaxed">
-                    <span class="lang-ar">الاتصال المستقر هو عصب الشركات. نعمل في سينك على تصميم بنى تحتية شبكية عالية الأداء، وحمايتها بجدران نارية متطورة من كبرى الشركات العالمية.</span>
-                    <span class="lang-en">Stable connectivity is the backbone of modern business. We design high-performance network infrastructures protected by enterprise-grade firewalls from top global manufacturers.</span>
+                <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-lg text-on-primary mb-4 font-bold" data-ar="هندسة الشبكات والحلول الأمنية" data-en="Network Engineering & Security Solutions">هندسة الشبكات والحلول الأمنية</h2>
+                <p class="font-body-lg text-body-lg text-primary-fixed-dim mb-6 leading-relaxed" data-ar="الاتصال المستقر هو عصب الشركات. نعمل في سينك على تصميم بنى تحتية شبكية عالية الأداء، وحمايتها بجدران نارية متطورة من كبرى الشركات العالمية." data-en="Stable connectivity is the backbone of enterprises. At Sync, we design high-performance network infrastructure and protect it with advanced firewalls from leading global vendors.">
+                    الاتصال المستقر هو عصب الشركات. نعمل في سينك على تصميم بنى تحتية شبكية عالية الأداء، وحمايتها بجدران نارية متطورة من كبرى الشركات العالمية.
                 </p>
                 <div class="space-y-4 mb-8">
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
                         <div>
-                            <h4 class="font-headline-md text-base text-on-primary font-bold">
-                                <span class="lang-ar">جدران الحماية (Fortigate Enterprise)</span>
-                                <span class="lang-en">Firewalls & Threat Block (Fortigate)</span>
-                            </h4>
-                            <p class="font-body-md text-primary-fixed-dim">
-                                <span class="lang-ar">تصميم سياسات أمان صارمة لحظر التهديدات الخارجية والتحكم بحزم البيانات الواردة والصادرة.</span>
-                                <span class="lang-en">Designing firewalls policies to block incoming threats and control data packets routing safely.</span>
-                            </p>
+                            <h4 class="font-headline-md text-base text-on-primary font-bold" data-ar="جدران الحماية (Fortigate Enterprise)" data-en="Firewalls (Fortigate Enterprise)">جدران الحماية (Fortigate Enterprise)</h4>
+                            <p class="font-body-md text-primary-fixed-dim" data-ar="تصميم سياسات أمان صارمة لحظر التهديدات الخارجية والتحكم بحزم البيانات الواردة والصادرة." data-en="Designing strict security policies to block external threats and control incoming and outgoing data packets.">تصميم سياسات أمان صارمة لحظر التهديدات الخارجية والتحكم بحزم البيانات الواردة والصادرة.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
                         <div>
-                            <h4 class="font-headline-md text-base text-on-primary font-bold">
-                                <span class="lang-ar">أجهزة الشبكات (Cisco Switches & Routers)</span>
-                                <span class="lang-en">Routing & Switching (Cisco Enterprise)</span>
-                            </h4>
-                            <p class="font-body-md text-primary-fixed-dim">
-                                <span class="lang-ar">بناء شبكات داخلية معزولة (VLANs)، وموازنة الأحمال لضمان سرعة نقل البيانات محليًا.</span>
-                                <span class="lang-en">Building isolated VLAN structures and load balancing rules to optimize internal speeds.</span>
-                            </p>
+                            <h4 class="font-headline-md text-base text-on-primary font-bold" data-ar="أجهزة الشبكات (Cisco Switches & Routers)" data-en="Network Equipment (Cisco Switches & Routers)">أجهزة الشبكات (Cisco Switches & Routers)</h4>
+                            <p class="font-body-md text-primary-fixed-dim" data-ar="بناء شبكات داخلية معزولة (VLANs)، وموازنة الأحمال لضمان سرعة نقل البيانات محليًا." data-en="Building isolated internal networks (VLANs) and load balancing to ensure fast local data transfer.">بناء شبكات داخلية معزولة (VLANs)، وموازنة الأحمال لضمان سرعة نقل البيانات محليًا.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-secondary-fixed-dim mt-1">check_circle</span>
                         <div>
-                            <h4 class="font-headline-md text-base text-on-primary font-bold">
-                                <span class="lang-ar">الاتصال الآمن عن بعد (IPsec / SSL VPN)</span>
-                                <span class="lang-en">Secure Remote Working (IPsec/SSL VPN)</span>
-                            </h4>
-                            <p class="font-body-md text-primary-fixed-dim">
-                                <span class="lang-ar">تمكين الموظفين والفروع الخارجية من الوصول المشفر والآمن لبيانات وأنظمة الشركة الداخلية.</span>
-                                <span class="lang-en">Enabling branches and remote staff to connect securely through encrypted tunnels to local database environments.</span>
-                            </p>
+                            <h4 class="font-headline-md text-base text-on-primary font-bold" data-ar="الاتصال الآمن عن بعد (IPsec / SSL VPN)" data-en="Secure Remote Access (IPsec / SSL VPN)">الاتصال الآمن عن بعد (IPsec / SSL VPN)</h4>
+                            <p class="font-body-md text-primary-fixed-dim" data-ar="تمكين الموظفين والفروع الخارجية من الوصول المشفر والآمن لبيانات وأنظمة الشركة الداخلية." data-en="Enabling employees and external branches to securely and encryptedly access internal company data and systems.">تمكين الموظفين والفروع الخارجية من الوصول المشفر والآمن لبيانات وأنظمة الشركة الداخلية.</p>
                         </div>
                     </div>
                 </div>
@@ -185,62 +113,40 @@
                 </div>
             </div>
             <div class="flex-1 w-full h-80 md:h-[400px] rounded-2xl overflow-hidden bg-black/20 border border-surface-tint/50 z-10">
-                <img alt="Data Center Firewall Hardware Mockup" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSxo-F3zu5ybTPqFxuRmrYrIwExxEogyFV-q1392_Qq0kvdLYE9aRd7BGpxCd5bE6dMjonURC2V5TtlsSq-e7Cz62qV4mfyExHoUP2yst2qXTnoRaDlGovBafRZ6__LAAWL8tXguKSwtOx22rYQdjKUUb2ICFZcSGmxhfZAzIIhV_6e4C4O1wjCShQgw8yQp76yunOEJQTQvt5sR7WjqQuTBkHsnXEhjlUY26xqWTm6d2jDgX2RsewLb71m2ou-feHaUwHc9cv0w">
+                <img alt="Data Center Firewall" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSxo-F3zu5ybTPqFxuRmrYrIwExxEogyFV-q1392_Qq0kvdLYE9aRd7BGpxCd5bE6dMjonURC2V5TtlsSq-e7Cz62qV4mfyExHoUP2yst2qXTnoRaDlGovBafRZ6__LAAWL8tXguKSwtOx22rYQdjKUUb2ICFZcSGmxhfZAzIIhV_6e4C4O1wjCShQgw8yQp76yunOEJQTQvt5sR7WjqQuTBkHsnXEhjlUY26xqWTm6d2jDgX2RsewLb71m2ou-feHaUwHc9cv0w">
             </div>
         </section>
 
         <!-- Capability 3: Business Alignment -->
         <section class="bg-surface rounded-3xl p-8 md:p-12 border border-outline-variant/20 ambient-shadow-sm flex flex-col lg:flex-row items-center gap-12 mb-12 relative overflow-hidden">
-            <div class="flex-1 lg:order-1 text-right">
+            <div class="flex-1 lg:order-1">
                 <div class="w-14 h-14 bg-primary text-on-primary rounded-2xl flex items-center justify-center mb-6">
                     <span class="material-symbols-outlined text-2xl">architecture</span>
                 </div>
-                <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-lg text-primary mb-4 font-bold">
-                    <span class="lang-ar">تسيير ومواءمة الأعمال (Business Alignment)</span>
-                    <span class="lang-en">Business Alignment & Audits</span>
-                </h2>
-                <p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
-                    <span class="lang-ar">التكنولوجيا دون تنظيم تفقد قيمتها. يساعدك استشاريو سينك على مراجعة طريقة سير العمل الورقية أو التقليدية، وإعادة رسم مساراتها لتستغل قوة المنظومة الرقمية بذكاء.</span>
-                    <span class="lang-en">Technology without organization loses value. Sync's consultants audit paper and legacy workflows, restructuring them to fully leverage digital systems.</span>
+                <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-lg text-primary mb-4 font-bold" data-ar="تسيير ومواءمة الأعمال" data-en="Business Alignment">تسيير ومواءمة الأعمال</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed" data-ar="التكنولوجيا دون تنظيم تفقد قيمتها. يساعدك استشاريو سينك على مراجعة طريقة سير العمل الورقية أو التقليدية، وإعادة رسم مساراتها لتستغل قوة المنظومة الرقمية بذكاء." data-en="Technology without organization loses its value. Sync consultants help you review traditional or paper-based workflows and redesign them to leverage the power of digital ecosystems intelligently.">
+                    التكنولوجيا دون تنظيم تفقد قيمتها. يساعدك استشاريو سينك على مراجعة طريقة سير العمل الورقية أو التقليدية، وإعادة رسم مساراتها لتستغل قوة المنظومة الرقمية بذكاء.
                 </p>
                 <div class="space-y-4 mb-8">
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
                         <div>
-                            <h4 class="font-headline-md text-base text-primary font-bold">
-                                <span class="lang-ar">هندسة العمليات والسياسات الإدارية</span>
-                                <span class="lang-en">Process Engineering & Policy mapping</span>
-                            </h4>
-                            <p class="font-body-md text-on-surface-variant">
-                                <span class="lang-ar">تبسيط الإجراءات المتكررة وتقليص عدد التوقيعات والاعتمادات اللازمة لتنفيذ المهام.</span>
-                                <span class="lang-en">Simplifying repetitive tasks and trimming layers of sign-offs required to complete routine items.</span>
-                            </p>
+                            <h4 class="font-headline-md text-base text-primary font-bold" data-ar="هندسة العمليات والسياسات الإدارية" data-en="Process Engineering & Administrative Policies">هندسة العمليات والسياسات الإدارية</h4>
+                            <p class="font-body-md text-on-surface-variant" data-ar="تبسيط الإجراءات المتكررة وتقليص عدد التوقيعات والاعتمادات اللازمة لتنفيذ المهام." data-en="Simplifying repetitive procedures and reducing the number of signatures and approvals needed to execute tasks.">تبسيط الإجراءات المتكررة وتقليص عدد التوقيعات والاعتمادات اللازمة لتنفيذ المهام.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
                         <div>
-                            <h4 class="font-headline-md text-base text-primary font-bold">
-                                <span class="lang-ar">قياس مؤشرات الأداء (KPIs)</span>
-                                <span class="lang-en">KPI Measurements & Dashboards</span>
-                            </h4>
-                            <p class="font-body-md text-on-surface-variant">
-                                <span class="lang-ar">تصميم لوحات تحكم (Dashboards) تفاعلية للإدارات العليا لقياس أداء المبيعات والإنتاجية لحظة بلحظة.</span>
-                                <span class="lang-en">Designing dynamic dashboards for management to inspect sales, operations, and stock metrics instantly.</span>
-                            </p>
+                            <h4 class="font-headline-md text-base text-primary font-bold" data-ar="قياس مؤشرات الأداء (KPIs)" data-en="Performance Indicators (KPIs)">قياس مؤشرات الأداء (KPIs)</h4>
+                            <p class="font-body-md text-on-surface-variant" data-ar="تصميم لوحات تحكم (Dashboards) تفاعلية للإدارات العليا لقياس أداء المبيعات والإنتاجية لحظة بلحظة." data-en="Designing interactive dashboards for senior management to measure sales and productivity performance in real-time.">تصميم لوحات تحكم (Dashboards) تفاعلية للإدارات العليا لقياس أداء المبيعات والإنتاجية لحظة بلحظة.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
                         <span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
                         <div>
-                            <h4 class="font-headline-md text-base text-primary font-bold">
-                                <span class="lang-ar">إدارة التغيير وتدريب الكوادر</span>
-                                <span class="lang-en">Change Management & Staff Training</span>
-                            </h4>
-                            <p class="font-body-md text-on-surface-variant">
-                                <span class="lang-ar">مرافقة موظفيك في مرحلة الانتقال لضمان تقبلهم للنظام الجديد وحل أي عقبات تشغيلية تواجههم.</span>
-                                <span class="lang-en">Guiding your team through migration phases, conducting workshops to ensure smooth adoption of new software.</span>
-                            </p>
+                            <h4 class="font-headline-md text-base text-primary font-bold" data-ar="إدارة التغيير وتدريب الكوادر" data-en="Change Management & Staff Training">إدارة التغيير وتدريب الكوادر</h4>
+                            <p class="font-body-md text-on-surface-variant" data-ar="مرافقة موظفيك في مرحلة الانتقال لضمان تقبلهم للنظام الجديد وحل أي عقبات تشغيلية تواجههم." data-en="Accompanying your employees during the transition to ensure they embrace the new system and resolve any operational obstacles.">مرافقة موظفيك في مرحلة الانتقال لضمان تقبلهم للنظام الجديد وحل أي عقبات تشغيلية تواجههم.</p>
                         </div>
                     </div>
                 </div>
@@ -257,30 +163,18 @@
 
         <!-- Consultation Banner -->
         <div class="w-full bg-secondary text-on-secondary rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between ambient-shadow-sm mt-12">
-            <div class="max-w-xl text-right">
-                <h3 class="font-headline-md text-headline-md mb-2 font-bold">
-                    <span class="lang-ar">هل أنت مستعد لمطابقة احتياجاتك مع قدراتنا؟</span>
-                    <span class="lang-en">Ready to match your needs with our capabilities?</span>
-                </h3>
-                <p class="font-body-md text-body-md text-secondary-fixed-dim">
-                    <span class="lang-ar">دعنا نناقش المشاكل الفنية أو التنظيمية التي تعاني منها مؤسستك لنقدم الحل المثالي.</span>
-                    <span class="lang-en">Let's review the technical or organizational problems facing your business to design the right fit.</span>
-                </p>
+            <div class="max-w-xl">
+                <h3 class="font-headline-md text-headline-md mb-2 font-bold" data-ar="هل أنت مستعد لمطابقة احتياجاتك مع قدراتنا؟" data-en="Ready to Match Your Needs with Our Capabilities?">هل أنت مستعد لمطابقة احتياجاتك مع قدراتنا؟</h3>
+                <p class="font-body-md text-body-md text-secondary-fixed-dim" data-ar="دعنا نناقش المشاكل الفنية أو التنظيمية التي تعاني منها مؤسستك لنقدم الحل المثالي." data-en="Let us discuss the technical or organizational challenges your organization faces to provide the ideal solution.">دعنا نناقش المشاكل الفنية أو التنظيمية التي تعاني منها مؤسستك لنقدم الحل المثالي.</p>
             </div>
-            <a href="contact.html" class="mt-6 md:mt-0 bg-on-secondary text-secondary hover:bg-surface hover:text-primary px-8 py-4 rounded-full font-label-md text-label-md btn-hover whitespace-nowrap">
-                <span class="lang-ar">احجز استشارتك التقنية</span>
-                <span class="lang-en">Request Consultation</span>
+            <a href="contact.html" class="mt-6 md:mt-0 bg-on-secondary text-secondary hover:bg-surface hover:text-primary px-8 py-4 rounded-full font-label-md text-label-md btn-hover whitespace-nowrap" data-ar="احجز استشارتك التقنية" data-en="Book Your Technical Consultation">
+                احجز استشارتك التقنية
             </a>
         </div>
     </main>
 
-    <!-- Global Footer Placeholder -->
     <footer id="global-footer"></footer>
-
-    <!-- Global Modals Container -->
     <div id="global-modals"></div>
-
-    <!-- Scripts -->
     <script src="js/components.js"></script>
     <script src="js/main.js"></script>
 </body>

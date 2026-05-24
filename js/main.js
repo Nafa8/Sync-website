@@ -1,31 +1,20 @@
 // Global Interactivity and Animations
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Language Toggle & Placeholder Translation Helper
-    const updatePlaceholders = () => {
-        const isEn = document.documentElement.lang === 'en';
-        document.querySelectorAll('[data-placeholder-ar]').forEach(input => {
-            const arVal = input.getAttribute('data-placeholder-ar');
-            const enVal = input.getAttribute('data-placeholder-en');
-            input.placeholder = isEn ? enVal : arVal;
-        });
-    };
+    // Helper: get current language
+    const getLang = () => localStorage.getItem('sync-lang') || 'ar';
 
-    // Initialize placeholders
-    updatePlaceholders();
-
-    // Listen for language change event to update placeholders dynamically
-    window.addEventListener('sync-lang-changed', updatePlaceholders);
-
-    // 2. In-Website Message Modal Helper Function
-    window.showInWebsiteMessage = (title, text, type = 'success') => {
+    // 1. In-Website Message Modal Helper Function
+    window.showInWebsiteMessage = (titleAr, titleEn, textAr, textEn, type = 'success') => {
         const modal = document.getElementById('inwebsite-message-modal');
         const titleEl = document.getElementById('msg-modal-title');
         const textEl = document.getElementById('msg-modal-text');
         const iconEl = document.getElementById('msg-modal-icon');
         const iconContainer = document.getElementById('msg-modal-icon-container');
+        const lang = getLang();
 
         if (modal && titleEl && textEl && iconEl && iconContainer) {
-            titleEl.textContent = title;
+            titleEl.textContent = lang === 'ar' ? titleAr : titleEn;
+            const text = lang === 'ar' ? textAr : textEn;
             textEl.innerHTML = text.replace(/\n/g, '<br>');
             
             if (type === 'error') {
@@ -38,11 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
             
             modal.showModal();
         } else {
+            const title = lang === 'ar' ? titleAr : titleEn;
+            const text = lang === 'ar' ? textAr : textEn;
             alert(`${title}\n\n${text}`);
         }
     };
 
-    // 3. Smooth scroll for anchor links pointing to sections
+    // 2. Smooth scroll for anchor links pointing to sections
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -58,47 +49,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 4. Handle consultation form validation and submission feedback
+    // 3. Handle consultation form validation and submission feedback
     const contactForm = document.querySelector('form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             
-            const isAr = document.documentElement.lang === 'ar';
-            
-            // Gather input fields using unique IDs
-            const fullName = document.getElementById('form-fullname')?.value.trim();
-            const email = document.getElementById('form-email')?.value.trim();
-            const phone = document.getElementById('form-phone')?.value.trim();
-            const service = document.getElementById('form-service')?.value;
-            const message = document.getElementById('form-message')?.value.trim();
+            // Gather input fields
+            const inputs = contactForm.querySelectorAll('input, select, textarea');
+            let allFilled = true;
+            inputs.forEach(input => {
+                if (input.hasAttribute('required') && !input.value.trim()) {
+                    allFilled = false;
+                }
+            });
 
-            if (!fullName || !email || !phone || !service || !message) {
+            if (!allFilled) {
                 showInWebsiteMessage(
-                    isAr ? 'تنبيه' : 'Warning', 
-                    isAr ? 'الرجاء ملء جميع الحقول المطلوبة المميزة بعلامة (*).' : 'Please fill in all required fields marked with (*).', 
+                    'تنبيه',
+                    'Warning',
+                    'الرجاء ملء جميع الحقول المطلوبة المميزة بعلامة (*).',
+                    'Please fill in all required fields marked with (*).',
                     'error'
                 );
                 return;
             }
 
-            // Mock submission success (since it's a static site)
+            // Mock submission success (static site)
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalBtnContent = submitBtn.innerHTML;
             
             submitBtn.disabled = true;
-            submitBtn.innerHTML = isAr ? `
-                <span>جاري إرسال الطلب...</span>
-                <span class="material-symbols-outlined animate-spin text-sm">sync</span>
-            ` : `
-                <span>Sending...</span>
+            const lang = getLang();
+            submitBtn.innerHTML = `
+                <span>${lang === 'ar' ? 'جاري إرسال الطلب...' : 'Sending...'}</span>
                 <span class="material-symbols-outlined animate-spin text-sm">sync</span>
             `;
 
             setTimeout(() => {
                 showInWebsiteMessage(
-                    isAr ? 'تم الإرسال بنجاح' : 'Sent Successfully',
-                    isAr ? 'شكرًا لتواصلك معنا! تم إرسال طلب الاستشارة الخاص بك بنجاح، وسيتصل بك أحد خبرائنا قريبًا.' : 'Thank you for reaching out! Your consultation request has been successfully sent. One of our experts will contact you shortly.',
+                    'تم الإرسال بنجاح',
+                    'Sent Successfully',
+                    'شكرًا لتواصلك معنا! تم إرسال طلب الاستشارة الخاص بك بنجاح، وسيتصل بك أحد خبرائنا قريبًا.',
+                    'Thank you for reaching out! Your consultation request has been successfully sent. One of our experts will contact you shortly.',
                     'success'
                 );
                 
@@ -109,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Scroll Reveal Interactions
+    // 4. Scroll Reveal Interactions
     const revealOnScroll = () => {
         const reveals = document.querySelectorAll('.group, .bg-surface, .p-8');
         const windowHeight = window.innerHeight;

@@ -3,6 +3,11 @@ body {
     background-color: #fbf8ff;
 }
 
+/* English font override */
+html[lang="en"] body {
+    font-family: 'Inter', 'IBM Plex Sans Arabic', sans-serif;
+}
+
 .glass-panel {
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(16px);
@@ -31,6 +36,47 @@ dialog::backdrop {
     backdrop-filter: blur(4px);
 }
 
+/* Language Toggle Pill */
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    background: rgba(0,0,0,0.06);
+    border-radius: 999px;
+    padding: 3px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.lang-toggle-option {
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    color: rgba(0,0,0,0.5);
+    z-index: 1;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.lang-toggle-option.active {
+    background: #fff;
+    color: #1b1b1f;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+
+/* Smooth direction change */
+html {
+    transition: direction 0s;
+}
+
+[data-ar][data-en] {
+    transition: opacity 0.15s ease;
+}
+
 /* Custom Scrollbar for modern feel */
 ::-webkit-scrollbar {
     width: 8px;
@@ -48,13 +94,3 @@ dialog::backdrop {
 ::-webkit-scrollbar-thumb:hover {
     background: #78767b;
 }
-
-/* Language Toggle Visibility Rules */
-html[lang="ar"] .lang-en {
-    display: none !important;
-}
-
-html[lang="en"] .lang-ar {
-    display: none !important;
-}
-

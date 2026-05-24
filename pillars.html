@@ -1,67 +1,37 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
+<html lang="ar" dir="rtl" data-title-ar="الركائز الاستراتيجية | Sync" data-title-en="Strategic Pillars | Sync">
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    
-    <!-- Sync/Pillars Title -->
-    <title>Sync/Pillars</title>
-    
-    <!-- Website Favicon inside Browser Tab -->
-    <link rel="icon" type="image/png" href="logo.png">
-    
-    <!-- Startup Language Script (Executes immediately to avoid flash of unstyled direction) -->
-    <script>
-        (function() {
-            const savedLang = localStorage.getItem('sync-lang') || 'ar';
-            document.documentElement.lang = savedLang;
-            document.documentElement.dir = savedLang === 'ar' ? 'rtl' : 'ltr';
-        })();
-    </script>
-    
-    <!-- Material Icons & IBM Plex Arabic Font -->
+    <title>الركائز الاستراتيجية | Sync</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS (via CDN) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script src="js/tailwind-config.js"></script>
-    
-    <!-- Custom Style Sheet -->
     <link href="css/styles.css" rel="stylesheet">
 </head>
 <body class="text-on-surface bg-background antialiased selection:bg-secondary-container selection:text-on-secondary-container min-h-screen flex flex-col pt-20">
 
-    <!-- Global Header Placeholder -->
     <header id="global-header"></header>
 
-    <!-- Main Content Container -->
-    <main class="flex-grow pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full pt-12 text-right">
+    <main class="flex-grow pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto w-full pt-12" data-align-ar="text-right" data-align-en="text-left">
         <!-- Hero Header -->
         <div class="text-center mb-16">
             <div class="inline-flex items-center gap-2 bg-secondary/10 text-secondary px-4 py-2 rounded-full w-fit mb-6 mx-auto">
                 <span class="material-symbols-outlined text-sm">filter_hdr</span>
-                <span class="font-label-md text-label-md font-bold">
-                    <span class="lang-ar">الركائز الأساسية</span>
-                    <span class="lang-en">Our Pillars</span>
-                </span>
+                <span class="font-label-md text-label-md font-bold" data-ar="الركائز الأساسية" data-en="Our Pillars">الركائز الأساسية</span>
             </div>
-            <h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-4 font-bold">
-                <span class="lang-ar">الركائز الاستراتيجية التي نرتكز عليها</span>
-                <span class="lang-en">Strategic Pillars of Our Operations</span>
-            </h1>
-            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
-                <span class="lang-ar">تعتمد سينك في بناء علاقاتها وتصميم منظوماتها على أربعة ركائز متكاملة تضمن نجاح شريكنا التجاري واستقرار عملياته.</span>
-                <span class="lang-en">Sync anchors its engineering processes and partner relationships on four core pillars that secure business performance.</span>
-            </p>
+            <h1 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-4 font-bold" data-ar="الركائز الاستراتيجية التي نرتكز عليها" data-en="The Strategic Pillars We Stand On">الركائز الاستراتيجية التي نرتكز عليها</h1>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto" data-ar="تعتمد سينك في بناء علاقاتها وتصميم منظوماتها على أربعة ركائز متكاملة تضمن نجاح شريكنا التجاري واستقرار عملياته." data-en="Sync builds its relationships and systems on four integrated pillars that ensure our business partner's success and operational stability.">تعتمد سينك في بناء علاقاتها وتصميم منظوماتها على أربعة ركائز متكاملة تضمن نجاح شريكنا التجاري واستقرار عملياته.</p>
         </div>
 
-        <!-- Pillars Grid Layout -->
+        <!-- Pillars Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <!-- Pillar 1 -->
             <div class="bg-surface p-8 md:p-10 rounded-3xl border border-outline-variant/20 ambient-shadow-sm flex flex-col gap-6 relative overflow-hidden group hover:ambient-shadow-md transition-shadow">
                 <div class="absolute -top-[10%] -left-[10%] w-24 h-24 bg-secondary/5 rounded-full z-0 group-hover:scale-150 transition-transform duration-300"></div>
-                
                 <div class="z-10 flex items-center justify-between">
                     <div class="w-14 h-14 bg-primary text-on-primary rounded-2xl flex items-center justify-center">
                         <span class="material-symbols-outlined text-2xl">sync_alt</span>
@@ -69,13 +39,9 @@
                     <span class="font-headline-xl text-5xl opacity-10 text-primary font-bold">01</span>
                 </div>
                 <div class="z-10">
-                    <h2 class="font-headline-md text-headline-md text-primary font-bold mb-3">
-                        <span class="lang-ar">التكامل والترابط / Integration</span>
-                        <span class="lang-en">Cohesion & Integration</span>
-                    </h2>
-                    <p class="font-body-md text-on-surface-variant leading-relaxed">
-                        <span class="lang-ar">نؤمن بأن الأنظمة المنعزلة تهدر الوقت وتسبب الأخطاء الإدارية. ركيزتنا الأولى هي إرساء مبدأ "التزامن" (Sync)؛ ربط أنظمة المؤسسة المالية والإدارية ببعضها البعض، ومزامنة الفروع المختلفة لتدفق البيانات بشكل موحد وبلا انقطاع.</span>
-                        <span class="lang-en">We believe isolated software wastes hours and invites administrative errors. Our first pillar is Synchronization (Sync): stitching financial, inventory, and staff databases into a unified flow.</span>
+                    <h2 class="font-headline-md text-headline-md text-primary font-bold mb-3" data-ar="التكامل والترابط" data-en="Integration & Connectivity">التكامل والترابط</h2>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed" data-ar="نؤمن بأن الأنظمة المنعزلة تهدر الوقت وتسبب الأخطاء الإدارية. ركيزتنا الأولى هي إرساء مبدأ \"التزامن\" (Sync)؛ ربط أنظمة المؤسسة المالية والإدارية ببعضها البعض، ومزامنة الفروع المختلفة لتدفق البيانات بشكل موحد وبلا انقطاع." data-en="We believe isolated systems waste time and cause administrative errors. Our first pillar is establishing the principle of &quot;Sync&quot; — connecting financial and administrative systems together and synchronizing different branches for unified, uninterrupted data flow.">
+                        نؤمن بأن الأنظمة المنعزلة تهدر الوقت وتسبب الأخطاء الإدارية. ركيزتنا الأولى هي إرساء مبدأ "التزامن" (Sync)؛ ربط أنظمة المؤسسة المالية والإدارية ببعضها البعض، ومزامنة الفروع المختلفة لتدفق البيانات بشكل موحد وبلا انقطاع.
                     </p>
                 </div>
             </div>
@@ -83,7 +49,6 @@
             <!-- Pillar 2 -->
             <div class="bg-surface p-8 md:p-10 rounded-3xl border border-outline-variant/20 ambient-shadow-sm flex flex-col gap-6 relative overflow-hidden group hover:ambient-shadow-md transition-shadow">
                 <div class="absolute -top-[10%] -left-[10%] w-24 h-24 bg-secondary/5 rounded-full z-0 group-hover:scale-150 transition-transform duration-300"></div>
-                
                 <div class="z-10 flex items-center justify-between">
                     <div class="w-14 h-14 bg-primary text-on-primary rounded-2xl flex items-center justify-center">
                         <span class="material-symbols-outlined text-2xl">security_key</span>
@@ -91,13 +56,9 @@
                     <span class="font-headline-xl text-5xl opacity-10 text-primary font-bold">02</span>
                 </div>
                 <div class="z-10">
-                    <h2 class="font-headline-md text-headline-md text-primary font-bold mb-3">
-                        <span class="lang-ar">الحماية والأمن السيبراني / Security</span>
-                        <span class="lang-en">Security & Threat Mitigation</span>
-                    </h2>
-                    <p class="font-body-md text-on-surface-variant leading-relaxed">
-                        <span class="lang-ar">المنظومة الرقمية القوية هي منظومة محصنة. الأمان ليس ميزة إضافية، بل هو حجر أساس نضعه في كل سلك وشاشة. نطبق أعلى بروتوكولات الأمان لحماية قواعد البيانات من الاختراق، وحماية الشبكات بجدران حماية ومراقبة لحظر الهجمات.</span>
-                        <span class="lang-en">Strong digital systems must be secure systems. Threat mitigation is not an add-on; it is a foundation. We apply encryption standards, configure firewalls, and guard networks against breaches.</span>
+                    <h2 class="font-headline-md text-headline-md text-primary font-bold mb-3" data-ar="الحماية والأمن السيبراني" data-en="Cybersecurity & Protection">الحماية والأمن السيبراني</h2>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed" data-ar="المنظومة الرقمية القوية هي منظومة محصنة. الأمان ليس ميزة إضافية، بل هو حجر أساس نضعه في كل سلك وشاشة. نطبق أعلى بروتوكولات الأمان لحماية قواعد البيانات من الاختراق، وحماية الشبكات بجدران حماية ومراقبة لحظر الهجمات." data-en="A strong digital system is a fortified one. Security is not an add-on but a cornerstone embedded in every wire and screen. We apply the highest security protocols to protect databases from breaches and shield networks with firewalls and monitoring to block attacks.">
+                        المنظومة الرقمية القوية هي منظومة محصنة. الأمان ليس ميزة إضافية، بل هو حجر أساس نضعه في كل سلك وشاشة. نطبق أعلى بروتوكولات الأمان لحماية قواعد البيانات من الاختراق، وحماية الشبكات بجدران حماية ومراقبة لحظر الهجمات.
                     </p>
                 </div>
             </div>
@@ -105,7 +66,6 @@
             <!-- Pillar 3 -->
             <div class="bg-surface p-8 md:p-10 rounded-3xl border border-outline-variant/20 ambient-shadow-sm flex flex-col gap-6 relative overflow-hidden group hover:ambient-shadow-md transition-shadow">
                 <div class="absolute -top-[10%] -left-[10%] w-24 h-24 bg-secondary/5 rounded-full z-0 group-hover:scale-150 transition-transform duration-300"></div>
-                
                 <div class="z-10 flex items-center justify-between">
                     <div class="w-14 h-14 bg-primary text-on-primary rounded-2xl flex items-center justify-center">
                         <span class="material-symbols-outlined text-2xl">speed</span>
@@ -113,13 +73,9 @@
                     <span class="font-headline-xl text-5xl opacity-10 text-primary font-bold">03</span>
                 </div>
                 <div class="z-10">
-                    <h2 class="font-headline-md text-headline-md text-primary font-bold mb-3">
-                        <span class="lang-ar">تحسين ومواءمة الأداء / Optimization</span>
-                        <span class="lang-en">Optimization & Efficiency</span>
-                    </h2>
-                    <p class="font-body-md text-on-surface-variant leading-relaxed">
-                        <span class="lang-ar">التقنية تخدم الأعمال وليس العكس. مواءمة التقنية مع سياسات شركتك توفر على الموظفين ساعات العمل اليدوية وتعزز قدرتهم على الإنتاج. نركز على جعل تجربة استخدام الأنظمة واضحة، سريعة، وموجهة لتحقيق الكفاءة القصوى.</span>
-                        <span class="lang-en">Technology serves business, not the other way around. Aligning systems with your workflow cuts repetitive tasks and boosts staff capacity. We focus on providing clear, fast, efficient portals.</span>
+                    <h2 class="font-headline-md text-headline-md text-primary font-bold mb-3" data-ar="تحسين ومواءمة الأداء" data-en="Performance Optimization">تحسين ومواءمة الأداء</h2>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed" data-ar="التقنية تخدم الأعمال وليس العكس. مواءمة التقنية مع سياسات شركتك توفر على الموظفين ساعات العمل اليدوية وتعزز قدرتهم على الإنتاج. نركز على جعل تجربة استخدام الأنظمة واضحة، سريعة، وموجهة لتحقيق الكفاءة القصوى." data-en="Technology serves business, not the other way around. Aligning technology with your company policies saves employees hours of manual work and enhances their productivity. We focus on making system usage clear, fast, and directed toward maximum efficiency.">
+                        التقنية تخدم الأعمال وليس العكس. مواءمة التقنية مع سياسات شركتك توفر على الموظفين ساعات العمل اليدوية وتعزز قدرتهم على الإنتاج. نركز على جعل تجربة استخدام الأنظمة واضحة، سريعة، وموجهة لتحقيق الكفاءة القصوى.
                     </p>
                 </div>
             </div>
@@ -127,7 +83,6 @@
             <!-- Pillar 4 -->
             <div class="bg-surface p-8 md:p-10 rounded-3xl border border-outline-variant/20 ambient-shadow-sm flex flex-col gap-6 relative overflow-hidden group hover:ambient-shadow-md transition-shadow">
                 <div class="absolute -top-[10%] -left-[10%] w-24 h-24 bg-secondary/5 rounded-full z-0 group-hover:scale-150 transition-transform duration-300"></div>
-                
                 <div class="z-10 flex items-center justify-between">
                     <div class="w-14 h-14 bg-primary text-on-primary rounded-2xl flex items-center justify-center">
                         <span class="material-symbols-outlined text-2xl">update</span>
@@ -135,56 +90,36 @@
                     <span class="font-headline-xl text-5xl opacity-10 text-primary font-bold">04</span>
                 </div>
                 <div class="z-10">
-                    <h2 class="font-headline-md text-headline-md text-primary font-bold mb-3">
-                        <span class="lang-ar">الاستدامة والدعم المستمر / Care</span>
-                        <span class="lang-en">Continuous Care & SLA Support</span>
-                    </h2>
-                    <p class="font-body-md text-on-surface-variant leading-relaxed">
-                        <span class="lang-ar">الشريك الاستراتيجي يرافقك طوال الطريق. عندما ينمو شريكنا وتتغير احتياجاته، نكون مستعدين دائمًا لتحديث وترقية البنية التحتية، وتوفير الدعم الفني السريع لحل المشاكل التقنية في أي وقت لضمان سير أعمالك بلا انقطاع.</span>
-                        <span class="lang-en">A strategic partner goes the distance. As your business grows and your requirements evolve, we adjust your infrastructure, provisioning fast technical support and updates.</span>
+                    <h2 class="font-headline-md text-headline-md text-primary font-bold mb-3" data-ar="الاستدامة والدعم المستمر" data-en="Sustainability & Continuous Support">الاستدامة والدعم المستمر</h2>
+                    <p class="font-body-md text-on-surface-variant leading-relaxed" data-ar="الشريك الاستراتيجي يرافقك طوال الطريق. عندما ينمو شريكنا وتتغير احتياجاته، نكون مستعدين دائمًا لتحديث وترقية البنية التحتية، وتوفير الدعم الفني السريع لحل المشاكل التقنية في أي وقت لضمان سير أعمالك بلا انقطاع." data-en="A strategic partner accompanies you all the way. When our partner grows and their needs change, we're always ready to update and upgrade infrastructure, providing rapid technical support to solve problems anytime and ensure your business runs without interruption.">
+                        الشريك الاستراتيجي يرافقك طوال الطريق. عندما ينمو شريكنا وتتغير احتياجاته، نكون مستعدين دائمًا لتحديث وترقية البنية التحتية، وتوفير الدعم الفني السريع لحل المشاكل التقنية في أي وقت لضمان سير أعمالك بلا انقطاع.
                     </p>
                 </div>
             </div>
         </div>
 
-        <!-- Detailed Pillar Vision banner -->
+        <!-- Vision Banner -->
         <div class="bg-surface-container-low rounded-3xl p-8 md:p-12 border border-surface-variant text-center mb-12">
-            <h3 class="font-headline-lg text-headline-lg text-primary mb-4 font-bold">
-                <span class="lang-ar">نهجنا يضمن الاستمرارية والنمو المتزن</span>
-                <span class="lang-en">Our Cohesive Methodology Assures Continuity</span>
-            </h3>
-            <p class="font-body-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed">
-                <span class="lang-ar">إن التقاء هذه الركائز الأربعة في نهج سينك هو ما يجعلنا مختلفين. نحن لا نبني نظامًا معزولاً أو نقوم بتوصيل كابلات شبكة فحسب؛ بل نصنع أساساً رقمياً متماسكاً يدفع مؤسستك نحو المستقبل بأمان مطلق وثقة عالية.</span>
-                <span class="lang-en">The intersection of these four pillars is what makes Sync unique. We do not just link database servers or set firewall ports; we craft a solid digital environment that carries your business into the future.</span>
+            <h3 class="font-headline-lg text-headline-lg text-primary mb-4 font-bold" data-ar="نهجنا يضمن الاستمرارية والنمو المتزن" data-en="Our Approach Ensures Continuity and Balanced Growth">نهجنا يضمن الاستمرارية والنمو المتزن</h3>
+            <p class="font-body-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed" data-ar="إن التقاء هذه الركائز الأربعة في نهج سينك هو ما يجعلنا مختلفين. نحن لا نبني نظامًا معزولاً أو نقوم بتوصيل كابلات شبكة فحسب؛ بل نصنع أساساً رقمياً متماسكاً يدفع مؤسستك نحو المستقبل بأمان مطلق وثقة عالية." data-en="The convergence of these four pillars in Sync's approach is what makes us different. We don't just build isolated systems or connect network cables — we create a cohesive digital foundation that propels your organization toward the future with absolute security and high confidence.">
+                إن التقاء هذه الركائز الأربعة في نهج سينك هو ما يجعلنا مختلفين. نحن لا نبني نظامًا معزولاً أو نقوم بتوصيل كابلات شبكة فحسب؛ بل نصنع أساساً رقمياً متماسكاً يدفع مؤسستك نحو المستقبل بأمان مطلق وثقة عالية.
             </p>
         </div>
 
         <!-- Consultation Banner -->
         <div class="w-full bg-secondary text-on-secondary rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between ambient-shadow-sm">
             <div class="max-w-xl">
-                <h3 class="font-headline-md text-headline-md mb-2 font-bold">
-                    <span class="lang-ar">ابدأ بتطبيق الركائز الأربعة في أعمالك</span>
-                    <span class="lang-en">Apply Our Four Pillars to Your Business</span>
-                </h3>
-                <p class="font-body-md text-body-md text-secondary-fixed-dim">
-                    <span class="lang-ar">تحدث مع خبرائنا اليوم لتحديد ركائز التطوير المطلوبة لمؤسستك.</span>
-                    <span class="lang-en">Talk to our engineering team today to identify integration requirements for your company.</span>
-                </p>
+                <h3 class="font-headline-md text-headline-md mb-2 font-bold" data-ar="ابدأ بتطبيق الركائز الأربعة في أعمالك" data-en="Start Applying the Four Pillars in Your Business">ابدأ بتطبيق الركائز الأربعة في أعمالك</h3>
+                <p class="font-body-md text-body-md text-secondary-fixed-dim" data-ar="تحدث مع خبرائنا اليوم لتحديد ركائز التطوير المطلوبة لمؤسستك." data-en="Talk to our experts today to identify the development pillars needed for your organization.">تحدث مع خبرائنا اليوم لتحديد ركائز التطوير المطلوبة لمؤسستك.</p>
             </div>
-            <a href="contact.html" class="mt-6 md:mt-0 bg-on-secondary text-secondary hover:bg-surface hover:text-primary px-8 py-4 rounded-full font-label-md text-label-md btn-hover whitespace-nowrap">
-                <span class="lang-ar">تواصل معنا لبدء الدراسة</span>
-                <span class="lang-en">Contact Sync to Start</span>
+            <a href="contact.html" class="mt-6 md:mt-0 bg-on-secondary text-secondary hover:bg-surface hover:text-primary px-8 py-4 rounded-full font-label-md text-label-md btn-hover whitespace-nowrap" data-ar="تواصل معنا لبدء الدراسة" data-en="Contact Sync">
+                تواصل معنا لبدء الدراسة
             </a>
         </div>
     </main>
 
-    <!-- Global Footer Placeholder -->
     <footer id="global-footer"></footer>
-
-    <!-- Global Modals Container -->
     <div id="global-modals"></div>
-
-    <!-- Scripts -->
     <script src="js/components.js"></script>
     <script src="js/main.js"></script>
 </body>
